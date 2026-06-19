@@ -1,0 +1,1277 @@
+[
+  {
+    "id": "t01", "disease_id": "d01", "disease_name": "猪瘟",
+    "treatment_plans": [
+      {
+        "plan_name": "方案一：支持疗法",
+        "medications": [
+          {"medication_id": "m05", "medication_name": "头孢噻呋", "dosage_per_kg": "5mg", "frequency": "每日1次", "duration_days": 5, "route": "肌肉注射", "notes": "控制继发感染"},
+          {"medication_id": "m09", "medication_name": "氟尼辛葡甲胺", "dosage_per_kg": "2mg", "frequency": "每日1次", "duration_days": 3, "route": "肌肉注射", "notes": "退烧镇痛"},
+          {"medication_id": "m31", "medication_name": "黄芪多糖", "dosage_per_kg": "0.2ml", "frequency": "每日1次", "duration_days": 5, "route": "肌肉注射", "notes": "抗病毒增强免疫力"}
+        ],
+        "oral_medications": [
+          {"medication_name": "板青颗粒", "dosage": "100g拌料200斤", "frequency": "持续", "duration_days": 7, "notes": "清热解毒"},
+          {"medication_name": "阿莫西林粉", "dosage": "100g拌料200斤", "frequency": "持续", "duration_days": 7, "notes": "预防继发感染"},
+          {"medication_name": "电解多维", "dosage": "500g拌料1000斤", "frequency": "持续", "duration_days": 7, "notes": "增强体质"}
+        ],
+        "notes": "猪瘟无特效药，以支持疗法为主。注射用头孢+氟尼辛+黄芪多糖，分开注射。全群拌料：板青颗粒+阿莫西林+多维。"
+      },
+      {
+        "plan_name": "方案二：干扰素方案",
+        "medications": [
+          {"medication_id": "m34", "medication_name": "干扰素", "dosage_per_kg": "1ml/头", "frequency": "每日1次", "duration_days": 3, "route": "肌肉注射", "notes": "抗病毒"},
+          {"medication_id": "m05", "medication_name": "头孢噻呋", "dosage_per_kg": "5mg", "frequency": "每日1次", "duration_days": 5, "route": "肌肉注射", "notes": "控制继发感染"},
+          {"medication_id": "m09", "medication_name": "氟尼辛葡甲胺", "dosage_per_kg": "2mg", "frequency": "每日1次", "duration_days": 3, "route": "肌肉注射", "notes": "退烧"}
+        ],
+        "oral_medications": [
+          {"medication_name": "清瘟败毒散", "dosage": "200g拌料200斤", "frequency": "持续", "duration_days": 7, "notes": "清热解毒"},
+          {"medication_name": "电解多维", "dosage": "500g拌料1000斤", "frequency": "持续", "duration_days": 7, "notes": "增强体质"}
+        ],
+        "notes": "干扰素+头孢+氟尼辛，分开注射。配合清瘟败毒散拌料。"
+      }
+    ],
+    "nursing_care": "隔离病猪，保持温暖，提供优质饮水。对症治疗：便秘用硫酸镁，腹泻用蒙脱石。",
+    "priority": 1
+  },
+  {
+    "id": "t02", "disease_id": "d02", "disease_name": "非洲猪瘟",
+    "treatment_plans": [
+      {
+        "plan_name": "方案一：无特效治疗",
+        "medications": [],
+        "oral_medications": [],
+        "notes": "非洲猪瘟无疫苗无特效治疗，发现后立即上报，扑杀无害化处理。"
+      }
+    ],
+    "nursing_care": "严格隔离，等待官方处理。",
+    "priority": 1
+  },
+  {
+    "id": "t03", "disease_id": "d03", "disease_name": "猪口蹄疫",
+    "treatment_plans": [
+      {
+        "plan_name": "方案一：抗感染+对症治疗",
+        "medications": [
+          {"medication_id": "m01", "medication_name": "青霉素钾/钠", "dosage_per_kg": "4万单位", "frequency": "每日2次", "duration_days": 5, "route": "肌肉注射", "notes": "预防继发细菌感染"},
+          {"medication_id": "m09", "medication_name": "氟尼辛葡甲胺", "dosage_per_kg": "2mg", "frequency": "每日1次", "duration_days": 3, "route": "肌肉注射", "notes": "退烧镇痛"}
+        ],
+        "oral_medications": [
+          {"medication_name": "板青颗粒", "dosage": "100g拌料200斤", "frequency": "持续", "duration_days": 7, "notes": "清热解毒"},
+          {"medication_name": "阿莫西林粉", "dosage": "100g拌料200斤", "frequency": "持续", "duration_days": 7, "notes": "预防继发感染"}
+        ],
+        "topical_medications": [
+          {"medication_name": "0.1%高锰酸钾", "usage": "冲洗口腔溃疡", "frequency": "每日2次", "duration_days": 5},
+          {"medication_name": "碘甘油", "usage": "涂抹蹄部溃疡", "frequency": "每日2次", "duration_days": 5}
+        ],
+        "notes": "口腔用0.1%高锰酸钾冲洗，蹄部用碘甘油涂抹。注射用青霉素+氟尼辛。全群拌料：板青颗粒+阿莫西林。"
+      },
+      {
+        "plan_name": "方案二：头孢方案",
+        "medications": [
+          {"medication_id": "m05", "medication_name": "头孢噻呋", "dosage_per_kg": "5mg", "frequency": "每日1次", "duration_days": 5, "route": "肌肉注射", "notes": "控制继发感染"},
+          {"medication_id": "m16", "medication_name": "维生素C", "dosage_per_kg": "20mg", "frequency": "每日1次", "duration_days": 5, "route": "肌肉注射", "notes": "抗应激"}
+        ],
+        "oral_medications": [
+          {"medication_name": "双黄连口服液", "dosage": "1ml/kg体重", "frequency": "每日2次", "duration_days": 5, "notes": "清热解毒"},
+          {"medication_name": "电解多维", "dosage": "500g拌料1000斤", "frequency": "持续", "duration_days": 7, "notes": "增强体质"}
+        ],
+        "notes": "头孢+维C分开注射，配合双黄连口服液。"
+      }
+    ],
+    "nursing_care": "保持圈舍干燥清洁，提供软质饲料和清洁饮水。",
+    "priority": 1
+  },
+  {
+    "id": "t04", "disease_id": "d04", "disease_name": "猪蓝耳病",
+    "treatment_plans": [
+      {
+        "plan_name": "方案一：替米考星+多西环素",
+        "medications": [
+          {"medication_id": "m05", "medication_name": "头孢噻呋", "dosage_per_kg": "5mg", "frequency": "每日1次", "duration_days": 5, "route": "肌肉注射", "notes": "控制继发感染"},
+          {"medication_id": "m33", "medication_name": "替米考星", "dosage_per_kg": "10mg", "frequency": "每48小时1次", "duration_days": 3, "route": "肌肉注射", "notes": "控制呼吸道感染"}
+        ],
+        "oral_medications": [
+          {"medication_name": "替米考星预混剂", "dosage": "200g拌料200斤", "frequency": "持续", "duration_days": 10, "notes": "控制呼吸道感染"},
+          {"medication_name": "多西环素", "dosage": "100g拌料200斤", "frequency": "持续", "duration_days": 10, "notes": "控制继发感染"},
+          {"medication_name": "板青颗粒", "dosage": "100g拌料200斤", "frequency": "持续", "duration_days": 10, "notes": "清热解毒"},
+          {"medication_name": "电解多维", "dosage": "500g拌料1000斤", "frequency": "持续", "duration_days": 10, "notes": "增强体质"}
+        ],
+        "notes": "注射用头孢+替米考星，需分开注射（杀菌剂+抑菌剂有拮抗）。全群拌料：替米考星+多西环素+板青颗粒+多维。"
+      },
+      {
+        "plan_name": "方案二：泰万菌素方案",
+        "medications": [
+          {"medication_id": "m05", "medication_name": "头孢噻呋", "dosage_per_kg": "5mg", "frequency": "每日1次", "duration_days": 5, "route": "肌肉注射", "notes": "控制继发感染"},
+          {"medication_id": "m31", "medication_name": "黄芪多糖", "dosage_per_kg": "0.2ml", "frequency": "每日1次", "duration_days": 5, "route": "肌肉注射", "notes": "增强免疫力"}
+        ],
+        "oral_medications": [
+          {"medication_name": "泰万菌素", "dosage": "100g拌料200斤", "frequency": "持续", "duration_days": 10, "notes": "抑制蓝耳病病毒复制"},
+          {"medication_name": "多西环素", "dosage": "100g拌料200斤", "frequency": "持续", "duration_days": 10, "notes": "控制继发感染"},
+          {"medication_name": "清瘟败毒散", "dosage": "200g拌料200斤", "frequency": "持续", "duration_days": 10, "notes": "清热解毒"},
+          {"medication_name": "电解多维", "dosage": "500g拌料1000斤", "frequency": "持续", "duration_days": 10, "notes": "增强体质"}
+        ],
+        "notes": "泰万菌素对蓝耳病病毒有抑制作用，配合多西环素控制继发感染。"
+      },
+      {
+        "plan_name": "方案三：干扰素方案",
+        "medications": [
+          {"medication_id": "m34", "medication_name": "干扰素", "dosage_per_kg": "1ml/头", "frequency": "每日1次", "duration_days": 3, "route": "肌肉注射", "notes": "抗病毒"},
+          {"medication_id": "m05", "medication_name": "头孢噻呋", "dosage_per_kg": "5mg", "frequency": "每日1次", "duration_days": 5, "route": "肌肉注射", "notes": "控制继发感染"}
+        ],
+        "oral_medications": [
+          {"medication_name": "泰万菌素", "dosage": "100g拌料200斤", "frequency": "持续", "duration_days": 10, "notes": "抑制病毒复制"},
+          {"medication_name": "黄芪多糖散", "dosage": "100g拌料200斤", "frequency": "持续", "duration_days": 10, "notes": "增强免疫力"},
+          {"medication_name": "电解多维", "dosage": "500g拌料1000斤", "frequency": "持续", "duration_days": 10, "notes": "增强体质"}
+        ],
+        "notes": "干扰素+头孢注射，配合泰万菌素+黄芪多糖拌料。"
+      }
+    ],
+    "nursing_care": "改善通风，降低饲养密度，减少应激。",
+    "priority": 1
+  },
+  {
+    "id": "t05", "disease_id": "d05", "disease_name": "猪圆环病毒病",
+    "treatment_plans": [
+      {
+        "plan_name": "方案一：头孢+黄芪多糖",
+        "medications": [
+          {"medication_id": "m05", "medication_name": "头孢噻呋", "dosage_per_kg": "5mg", "frequency": "每日1次", "duration_days": 5, "route": "肌肉注射", "notes": "控制继发感染"},
+          {"medication_id": "m31", "medication_name": "黄芪多糖", "dosage_per_kg": "0.2ml", "frequency": "每日1次", "duration_days": 5, "route": "肌肉注射", "notes": "增强免疫力"}
+        ],
+        "oral_medications": [
+          {"medication_name": "氟苯尼考粉", "dosage": "100g拌料200斤", "frequency": "持续", "duration_days": 7, "notes": "控制继发感染"},
+          {"medication_name": "多西环素", "dosage": "100g拌料200斤", "frequency": "持续", "duration_days": 7, "notes": "控制继发感染"},
+          {"medication_name": "黄芪多糖散", "dosage": "100g拌料200斤", "frequency": "持续", "duration_days": 7, "notes": "增强免疫力"},
+          {"medication_name": "电解多维", "dosage": "500g拌料1000斤", "frequency": "持续", "duration_days": 7, "notes": "增强体质"}
+        ],
+        "notes": "注射用头孢+黄芪多糖，需分开注射（中药注射液与西药分开）。全群拌料：氟苯尼考+多西环素+黄芪多糖粉+多维。"
+      },
+      {
+        "plan_name": "方案二：干扰素方案",
+        "medications": [
+          {"medication_id": "m34", "medication_name": "干扰素", "dosage_per_kg": "1ml/头", "frequency": "每日1次", "duration_days": 3, "route": "肌肉注射", "notes": "抗病毒"},
+          {"medication_id": "m05", "medication_name": "头孢噻呋", "dosage_per_kg": "5mg", "frequency": "每日1次", "duration_days": 5, "route": "肌肉注射", "notes": "控制继发感染"}
+        ],
+        "oral_medications": [
+          {"medication_name": "清瘟败毒散", "dosage": "200g拌料200斤", "frequency": "持续", "duration_days": 7, "notes": "清热解毒"},
+          {"medication_name": "电解多维", "dosage": "500g拌料1000斤", "frequency": "持续", "duration_days": 7, "notes": "增强体质"}
+        ],
+        "notes": "干扰素+头孢分开注射，配合清瘟败毒散拌料。"
+      }
+    ],
+    "nursing_care": "改善饲养环境，减少应激，提供优质饲料。",
+    "priority": 2
+  },
+  {
+    "id": "t06", "disease_id": "d06", "disease_name": "猪流行性腹泻",
+    "treatment_plans": [
+      {
+        "plan_name": "方案一：口服补液+止泻",
+        "medications": [],
+        "oral_medications": [
+          {"medication_name": "硫酸庆大霉素", "dosage": "仔猪2-3ml/头", "frequency": "每日2次", "duration_days": 3, "notes": "口服，防止细菌继发感染"},
+          {"medication_name": "蒙脱石", "dosage": "仔猪3-5g/头", "frequency": "每日2次", "duration_days": 3, "notes": "口服，止泻保护肠道"},
+          {"medication_name": "口服补液盐", "dosage": "自由饮用", "frequency": "持续", "duration_days": 5, "notes": "口服，防止脱水"}
+        ],
+        "notes": "仔猪口服：庆大霉素+蒙脱石散+补液盐，可以同时使用。全群保温是关键。"
+      },
+      {
+        "plan_name": "方案二：杨树花+白头翁",
+        "medications": [],
+        "oral_medications": [
+          {"medication_name": "杨树花口服液", "dosage": "2-3ml/头", "frequency": "每日2次", "duration_days": 3, "notes": "中药止泻"},
+          {"medication_name": "白头翁口服液", "dosage": "1-2ml/kg体重", "frequency": "每日2次", "duration_days": 3, "notes": "清热解毒，凉血止痢"},
+          {"medication_name": "口服补液盐", "dosage": "自由饮用", "frequency": "持续", "duration_days": 5, "notes": "防止脱水"},
+          {"medication_name": "枯草芽孢杆菌", "dosage": "1g/头", "frequency": "每日2次", "duration_days": 5, "notes": "调节肠道菌群"}
+        ],
+        "notes": "中药止泻方案：杨树花+白头翁口服，配合补液盐和益生菌。"
+      }
+    ],
+    "nursing_care": "保温箱30-32℃，保持干燥，及时清除粪便。",
+    "priority": 1
+  },
+  {
+    "id": "t07", "disease_id": "d07", "disease_name": "猪传染性胸膜肺炎",
+    "treatment_plans": [
+      {
+        "plan_name": "方案一：头孢+氟尼辛",
+        "medications": [
+          {"medication_id": "m05", "medication_name": "头孢噻呋", "dosage_per_kg": "5mg", "frequency": "每日1次", "duration_days": 5, "route": "肌肉注射", "notes": "主要治疗药物"},
+          {"medication_id": "m09", "medication_name": "氟尼辛葡甲胺", "dosage_per_kg": "2mg", "frequency": "每日1次", "duration_days": 3, "route": "肌肉注射", "notes": "退烧抗炎"}
+        ],
+        "oral_medications": [
+          {"medication_name": "氟苯尼考粉", "dosage": "100g拌料200斤", "frequency": "持续", "duration_days": 7, "notes": "控制呼吸道感染"},
+          {"medication_name": "多西环素", "dosage": "100g拌料200斤", "frequency": "持续", "duration_days": 7, "notes": "控制继发感染"},
+          {"medication_name": "麻杏石甘散", "dosage": "100g拌料200斤", "frequency": "持续", "duration_days": 7, "notes": "止咳平喘"}
+        ],
+        "notes": "头孢+氟尼辛分开注射。全群拌料：氟苯尼考+多西环素+麻杏石甘散。"
+      },
+      {
+        "plan_name": "方案二：替米考星方案",
+        "medications": [
+          {"medication_id": "m33", "medication_name": "替米考星", "dosage_per_kg": "10mg", "frequency": "每48小时1次", "duration_days": 3, "route": "肌肉注射", "notes": "控制呼吸道感染"},
+          {"medication_id": "m09", "medication_name": "氟尼辛葡甲胺", "dosage_per_kg": "2mg", "frequency": "每日1次", "duration_days": 3, "route": "肌肉注射", "notes": "退烧抗炎"}
+        ],
+        "oral_medications": [
+          {"medication_name": "替米考星预混剂", "dosage": "200g拌料200斤", "frequency": "持续", "duration_days": 7, "notes": "控制呼吸道感染"},
+          {"medication_name": "多西环素", "dosage": "100g拌料200斤", "frequency": "持续", "duration_days": 7, "notes": "控制继发感染"},
+          {"medication_name": "麻杏石甘散", "dosage": "100g拌料200斤", "frequency": "持续", "duration_days": 7, "notes": "止咳平喘"},
+          {"medication_name": "甘草颗粒", "dosage": "100g拌料200斤", "frequency": "持续", "duration_days": 7, "notes": "润肺止咳"}
+        ],
+        "notes": "替米考星对胸膜肺炎放线杆菌效果极好。配合多西环素和中药止咳。"
+      }
+    ],
+    "nursing_care": "改善通风，降低饲养密度，减少应激。",
+    "priority": 1
+  },
+  {
+    "id": "t08", "disease_id": "d08", "disease_name": "猪气喘病",
+    "treatment_plans": [
+      {
+        "plan_name": "方案一：替米考星方案",
+        "medications": [
+          {"medication_id": "m33", "medication_name": "替米考星", "dosage_per_kg": "10mg", "frequency": "每48小时1次", "duration_days": 3, "route": "肌肉注射", "notes": "控制支原体感染"}
+        ],
+        "oral_medications": [
+          {"medication_name": "替米考星预混剂", "dosage": "200g拌料200斤", "frequency": "持续", "duration_days": 10, "notes": "控制支原体感染"},
+          {"medication_name": "麻杏石甘散", "dosage": "100g拌料200斤", "frequency": "持续", "duration_days": 10, "notes": "止咳平喘"},
+          {"medication_name": "甘草颗粒", "dosage": "100g拌料200斤", "frequency": "持续", "duration_days": 10, "notes": "润肺止咳"}
+        ],
+        "notes": "替米考星对支原体效果好。配合中药止咳平喘。"
+      },
+      {
+        "plan_name": "方案二：泰妙菌素方案",
+        "medications": [],
+        "oral_medications": [
+          {"medication_name": "泰妙菌素", "dosage": "100g拌料200斤", "frequency": "持续", "duration_days": 10, "notes": "控制支原体感染"},
+          {"medication_name": "多西环素", "dosage": "100g拌料200斤", "frequency": "持续", "duration_days": 10, "notes": "控制继发感染"},
+          {"medication_name": "麻杏石甘散", "dosage": "100g拌料200斤", "frequency": "持续", "duration_days": 10, "notes": "止咳平喘"}
+        ],
+        "notes": "泰妙菌素+多西环素拌料，配合中药止咳。"
+      },
+      {
+        "plan_name": "方案三：泰乐菌素方案",
+        "medications": [
+          {"medication_id": "m55", "medication_name": "泰乐菌素", "dosage_per_kg": "10mg", "frequency": "每日1次", "duration_days": 5, "route": "肌肉注射", "notes": "控制支原体感染"}
+        ],
+        "oral_medications": [
+          {"medication_name": "泰乐菌素预混剂", "dosage": "200g拌料200斤", "frequency": "持续", "duration_days": 10, "notes": "控制支原体感染"},
+          {"medication_name": "麻杏石甘散", "dosage": "100g拌料200斤", "frequency": "持续", "duration_days": 10, "notes": "止咳平喘"}
+        ],
+        "notes": "泰乐菌素对支原体效果好，配合中药止咳。"
+      }
+    ],
+    "nursing_care": "改善通风，降低饲养密度，减少应激。",
+    "priority": 2
+  },
+  {
+    "id": "t09", "disease_id": "d09", "disease_name": "仔猪黄痢",
+    "treatment_plans": [
+      {
+        "plan_name": "方案一：庆大霉素+蒙脱石",
+        "medications": [
+          {"medication_id": "m07", "medication_name": "硫酸庆大霉素", "dosage_per_kg": "2-3ml/头", "frequency": "每日2次", "duration_days": 3, "route": "口服", "notes": "口服，肠道杀菌"}
+        ],
+        "oral_medications": [
+          {"medication_name": "蒙脱石", "dosage": "1-2g/头", "frequency": "每日2次", "duration_days": 3, "notes": "止泻保护肠道"},
+          {"medication_name": "口服补液盐", "dosage": "自由饮用", "frequency": "持续", "duration_days": 5, "notes": "防止脱水"}
+        ],
+        "notes": "仔猪口服庆大霉素+蒙脱石+补液盐。母猪产前接种大肠杆菌疫苗预防。"
+      },
+      {
+        "plan_name": "方案二：硫酸新霉素方案",
+        "medications": [
+          {"medication_id": "m57", "medication_name": "硫酸新霉素", "dosage_per_kg": "7-15mg/kg", "frequency": "每日2次", "duration_days": 3, "route": "口服", "notes": "口服，肠道杀菌"}
+        ],
+        "oral_medications": [
+          {"medication_name": "杨树花口服液", "dosage": "2-3ml/头", "frequency": "每日2次", "duration_days": 3, "notes": "中药止泻"},
+          {"medication_name": "口服补液盐", "dosage": "自由饮用", "frequency": "持续", "duration_days": 5, "notes": "防止脱水"},
+          {"medication_name": "枯草芽孢杆菌", "dosage": "0.5g/头", "frequency": "每日2次", "duration_days": 5, "notes": "调节肠道菌群"}
+        ],
+        "notes": "新霉素+杨树花口服，配合补液盐和益生菌。"
+      }
+    ],
+    "nursing_care": "保温箱30-32℃，保持干燥，及时清除粪便。",
+    "priority": 1
+  },
+  {
+    "id": "t10", "disease_id": "d10", "disease_name": "仔猪白痢",
+    "treatment_plans": [
+      {
+        "plan_name": "方案一：庆大霉素+蒙脱石",
+        "medications": [
+          {"medication_id": "m07", "medication_name": "硫酸庆大霉素", "dosage_per_kg": "2-3ml/头", "frequency": "每日2次", "duration_days": 3, "route": "口服", "notes": "口服，肠道杀菌"}
+        ],
+        "oral_medications": [
+          {"medication_name": "蒙脱石", "dosage": "1-2g/头", "frequency": "每日2次", "duration_days": 3, "notes": "止泻保护肠道"},
+          {"medication_name": "口服补液盐", "dosage": "自由饮用", "frequency": "持续", "duration_days": 5, "notes": "防止脱水"}
+        ],
+        "notes": "仔猪口服庆大霉素+蒙脱石+补液盐。"
+      },
+      {
+        "plan_name": "方案二：白头翁+益生菌",
+        "medications": [],
+        "oral_medications": [
+          {"medication_name": "白头翁口服液", "dosage": "1-2ml/kg体重", "frequency": "每日2次", "duration_days": 3, "notes": "清热解毒，凉血止痢"},
+          {"medication_name": "乳酶生", "dosage": "2-3g/头", "frequency": "每日2次", "duration_days": 5, "notes": "调节肠道菌群"},
+          {"medication_name": "口服补液盐", "dosage": "自由饮用", "frequency": "持续", "duration_days": 5, "notes": "防止脱水"}
+        ],
+        "notes": "中药止泻方案：白头翁口服液+乳酶生+补液盐。"
+      }
+    ],
+    "nursing_care": "加强母猪饲养管理，保持产房清洁干燥。",
+    "priority": 2
+  },
+  {
+    "id": "t11", "disease_id": "d11", "disease_name": "猪丹毒",
+    "treatment_plans": [
+      {
+        "plan_name": "方案一：青霉素（首选）",
+        "medications": [
+          {"medication_id": "m01", "medication_name": "青霉素钾/钠", "dosage_per_kg": "6-8万单位", "frequency": "每日2-3次", "duration_days": 5, "route": "肌肉注射", "notes": "首选药物，效果极好"},
+          {"medication_id": "m09", "medication_name": "氟尼辛葡甲胺", "dosage_per_kg": "2mg", "frequency": "每日1次", "duration_days": 3, "route": "肌肉注射", "notes": "退烧镇痛"}
+        ],
+        "oral_medications": [
+          {"medication_name": "阿莫西林粉", "dosage": "100g拌料200斤", "frequency": "持续", "duration_days": 7, "notes": "巩固疗效"},
+          {"medication_name": "电解多维", "dosage": "500g拌料1000斤", "frequency": "持续", "duration_days": 7, "notes": "增强体质"}
+        ],
+        "notes": "青霉素是猪丹毒首选药物，效果极好。每日2-3次，连用5天。"
+      },
+      {
+        "plan_name": "方案二：头孢方案",
+        "medications": [
+          {"medication_id": "m05", "medication_name": "头孢噻呋", "dosage_per_kg": "5mg", "frequency": "每日1次", "duration_days": 5, "route": "肌肉注射", "notes": "广谱杀菌"},
+          {"medication_id": "m09", "medication_name": "氟尼辛葡甲胺", "dosage_per_kg": "2mg", "frequency": "每日1次", "duration_days": 3, "route": "肌肉注射", "notes": "退烧镇痛"}
+        ],
+        "oral_medications": [
+          {"medication_name": "阿莫西林粉", "dosage": "100g拌料200斤", "frequency": "持续", "duration_days": 7, "notes": "巩固疗效"},
+          {"medication_name": "电解多维", "dosage": "500g拌料1000斤", "frequency": "持续", "duration_days": 7, "notes": "增强体质"}
+        ],
+        "notes": "头孢+氟尼辛注射，配合阿莫西林拌料。"
+      }
+    ],
+    "nursing_care": "隔离病猪，保持圈舍清洁。",
+    "priority": 1
+  },
+  {
+    "id": "t12", "disease_id": "d12", "disease_name": "猪肺疫",
+    "treatment_plans": [
+      {
+        "plan_name": "方案一：头孢+氟尼辛",
+        "medications": [
+          {"medication_id": "m05", "medication_name": "头孢噻呋", "dosage_per_kg": "5mg", "frequency": "每日1次", "duration_days": 5, "route": "肌肉注射", "notes": "控制感染"},
+          {"medication_id": "m09", "medication_name": "氟尼辛葡甲胺", "dosage_per_kg": "2mg", "frequency": "每日1次", "duration_days": 3, "route": "肌肉注射", "notes": "退烧抗炎"}
+        ],
+        "oral_medications": [
+          {"medication_name": "氟苯尼考粉", "dosage": "100g拌料200斤", "frequency": "持续", "duration_days": 7, "notes": "控制呼吸道感染"},
+          {"medication_name": "多西环素", "dosage": "100g拌料200斤", "frequency": "持续", "duration_days": 7, "notes": "控制继发感染"},
+          {"medication_name": "麻杏石甘散", "dosage": "100g拌料200斤", "frequency": "持续", "duration_days": 7, "notes": "止咳平喘"}
+        ],
+        "notes": "头孢+氟尼辛注射，全群拌料：氟苯尼考+多西环素+麻杏石甘散。"
+      },
+      {
+        "plan_name": "方案二：链霉素+青霉素",
+        "medications": [
+          {"medication_id": "m01", "medication_name": "青霉素钾/钠", "dosage_per_kg": "4万单位", "frequency": "每日2次", "duration_days": 5, "route": "肌肉注射", "notes": "与链霉素联用增效"},
+          {"medication_id": "m02", "medication_name": "链霉素", "dosage_per_kg": "15mg", "frequency": "每日2次", "duration_days": 5, "route": "肌肉注射", "notes": "与青霉素联用增效"}
+        ],
+        "oral_medications": [
+          {"medication_name": "麻杏石甘散", "dosage": "100g拌料200斤", "frequency": "持续", "duration_days": 7, "notes": "止咳平喘"},
+          {"medication_name": "电解多维", "dosage": "500g拌料1000斤", "frequency": "持续", "duration_days": 7, "notes": "增强体质"}
+        ],
+        "notes": "青霉素+链霉素经典配伍，同注射器混合，协同杀菌。"
+      }
+    ],
+    "nursing_care": "改善通风，降低饲养密度。",
+    "priority": 2
+  },
+  {
+    "id": "t13", "disease_id": "d13", "disease_name": "猪链球菌病",
+    "treatment_plans": [
+      {
+        "plan_name": "方案一：头孢噻呋（首选）",
+        "medications": [
+          {"medication_id": "m05", "medication_name": "头孢噻呋", "dosage_per_kg": "5mg", "frequency": "每日1次", "duration_days": 5, "route": "肌肉注射", "notes": "首选药物"},
+          {"medication_id": "m09", "medication_name": "氟尼辛葡甲胺", "dosage_per_kg": "2mg", "frequency": "每日1次", "duration_days": 3, "route": "肌肉注射", "notes": "退烧抗炎"}
+        ],
+        "oral_medications": [
+          {"medication_name": "阿莫西林粉", "dosage": "100g拌料200斤", "frequency": "持续", "duration_days": 7, "notes": "巩固疗效"},
+          {"medication_name": "板青颗粒", "dosage": "100g拌料200斤", "frequency": "持续", "duration_days": 7, "notes": "清热解毒"}
+        ],
+        "notes": "头孢噻呋对链球菌效果极好。脑膜炎型可配合磺胺嘧啶钠（能透过血脑屏障）。"
+      },
+      {
+        "plan_name": "方案二：青霉素+磺胺嘧啶钠",
+        "medications": [
+          {"medication_id": "m01", "medication_name": "青霉素钾/钠", "dosage_per_kg": "6万单位", "frequency": "每日2-3次", "duration_days": 5, "route": "肌肉注射", "notes": "对链球菌效果好"},
+          {"medication_id": "m97", "medication_name": "磺胺嘧啶钠", "dosage_per_kg": "0.1ml", "frequency": "每日2次", "duration_days": 5, "route": "肌肉注射", "notes": "脑膜炎型首选，能透过血脑屏障"}
+        ],
+        "oral_medications": [
+          {"medication_name": "阿莫西林粉", "dosage": "100g拌料200斤", "frequency": "持续", "duration_days": 7, "notes": "巩固疗效"},
+          {"medication_name": "电解多维", "dosage": "500g拌料1000斤", "frequency": "持续", "duration_days": 7, "notes": "增强体质"}
+        ],
+        "notes": "脑膜炎型：青霉素+磺胺嘧啶钠，磺胺嘧啶钠能透过血脑屏障。"
+      },
+      {
+        "plan_name": "方案三：氨苄西林方案",
+        "medications": [
+          {"medication_id": "m53", "medication_name": "氨苄西林", "dosage_per_kg": "15mg", "frequency": "每日2次", "duration_days": 5, "route": "肌肉注射", "notes": "广谱杀菌"},
+          {"medication_id": "m09", "medication_name": "氟尼辛葡甲胺", "dosage_per_kg": "2mg", "frequency": "每日1次", "duration_days": 3, "route": "肌肉注射", "notes": "退烧抗炎"}
+        ],
+        "oral_medications": [
+          {"medication_name": "阿莫西林粉", "dosage": "100g拌料200斤", "frequency": "持续", "duration_days": 7, "notes": "巩固疗效"}
+        ],
+        "notes": "氨苄西林+氟尼辛注射，配合阿莫西林拌料。"
+      }
+    ],
+    "nursing_care": "隔离病猪，保持圈舍清洁，减少应激。",
+    "priority": 1
+  },
+  {
+    "id": "t14", "disease_id": "d14", "disease_name": "猪副伤寒",
+    "treatment_plans": [
+      {
+        "plan_name": "方案一：氟苯尼考方案",
+        "medications": [
+          {"medication_id": "m04", "medication_name": "氟苯尼考", "dosage_per_kg": "20mg", "frequency": "每48小时1次", "duration_days": 3, "route": "肌肉注射", "notes": "对沙门氏菌效果好"}
+        ],
+        "oral_medications": [
+          {"medication_name": "硫酸粘杆菌素", "dosage": "5mg/kg体重", "frequency": "每日2次", "duration_days": 5, "notes": "口服，肠道杀菌"},
+          {"medication_name": "蒙脱石", "dosage": "仔猪2-3g/头", "frequency": "每日2次", "duration_days": 3, "notes": "止泻保护肠道"},
+          {"medication_name": "口服补液盐", "dosage": "自由饮用", "frequency": "持续", "duration_days": 5, "notes": "防止脱水"}
+        ],
+        "notes": "氟苯尼考注射+硫酸粘杆菌素口服，配合蒙脱石和补液盐。"
+      },
+      {
+        "plan_name": "方案二：恩诺沙星方案",
+        "medications": [
+          {"medication_id": "m03", "medication_name": "恩诺沙星", "dosage_per_kg": "5mg", "frequency": "每日1次", "duration_days": 5, "route": "肌肉注射", "notes": "对沙门氏菌效果好"}
+        ],
+        "oral_medications": [
+          {"medication_name": "硫酸新霉素", "dosage": "7-15mg/kg体重", "frequency": "每日2次", "duration_days": 5, "notes": "口服，肠道杀菌"},
+          {"medication_name": "白头翁口服液", "dosage": "1-2ml/kg体重", "frequency": "每日2次", "duration_days": 3, "notes": "中药止泻"},
+          {"medication_name": "口服补液盐", "dosage": "自由饮用", "frequency": "持续", "duration_days": 5, "notes": "防止脱水"}
+        ],
+        "notes": "恩诺沙星注射+新霉素口服，配合白头翁和补液盐。"
+      }
+    ],
+    "nursing_care": "隔离病猪，保持圈舍清洁干燥。",
+    "priority": 2
+  },
+  {
+    "id": "t15", "disease_id": "d15", "disease_name": "猪伪狂犬病",
+    "treatment_plans": [
+      {
+        "plan_name": "方案一：支持疗法",
+        "medications": [
+          {"medication_id": "m05", "medication_name": "头孢噻呋", "dosage_per_kg": "5mg", "frequency": "每日1次", "duration_days": 5, "route": "肌肉注射", "notes": "控制继发感染"},
+          {"medication_id": "m31", "medication_name": "黄芪多糖", "dosage_per_kg": "0.2ml", "frequency": "每日1次", "duration_days": 5, "route": "肌肉注射", "notes": "增强免疫力"}
+        ],
+        "oral_medications": [
+          {"medication_name": "板青颗粒", "dosage": "100g拌料200斤", "frequency": "持续", "duration_days": 7, "notes": "清热解毒"},
+          {"medication_name": "电解多维", "dosage": "500g拌料1000斤", "frequency": "持续", "duration_days": 7, "notes": "增强体质"}
+        ],
+        "notes": "伪狂犬病无特效药，以支持疗法为主。注射用头孢+黄芪多糖。"
+      },
+      {
+        "plan_name": "方案二：干扰素方案",
+        "medications": [
+          {"medication_id": "m34", "medication_name": "干扰素", "dosage_per_kg": "1ml/头", "frequency": "每日1次", "duration_days": 3, "route": "肌肉注射", "notes": "抗病毒"},
+          {"medication_id": "m05", "medication_name": "头孢噻呋", "dosage_per_kg": "5mg", "frequency": "每日1次", "duration_days": 5, "route": "肌肉注射", "notes": "控制继发感染"}
+        ],
+        "oral_medications": [
+          {"medication_name": "清瘟败毒散", "dosage": "200g拌料200斤", "frequency": "持续", "duration_days": 7, "notes": "清热解毒"},
+          {"medication_name": "电解多维", "dosage": "500g拌料1000斤", "frequency": "持续", "duration_days": 7, "notes": "增强体质"}
+        ],
+        "notes": "干扰素+头孢注射，配合清瘟败毒散拌料。"
+      }
+    ],
+    "nursing_care": "隔离病猪，保持圈舍清洁。",
+    "priority": 1
+  },
+  {
+    "id": "t16", "disease_id": "d16", "disease_name": "猪细小病毒病",
+    "treatment_plans": [
+      {
+        "plan_name": "方案一：无特效治疗",
+        "medications": [],
+        "oral_medications": [
+          {"medication_name": "黄芪多糖散", "dosage": "100g拌料200斤", "frequency": "持续", "duration_days": 7, "notes": "增强免疫力"},
+          {"medication_name": "电解多维", "dosage": "500g拌料1000斤", "frequency": "持续", "duration_days": 7, "notes": "增强体质"}
+        ],
+        "notes": "细小病毒病无特效治疗，以预防为主。母猪配种前接种疫苗。"
+      }
+    ],
+    "nursing_care": "加强饲养管理，做好疫苗接种。",
+    "priority": 2
+  },
+  {
+    "id": "t17", "disease_id": "d17", "disease_name": "猪乙型脑炎",
+    "treatment_plans": [
+      {
+        "plan_name": "方案一：支持疗法",
+        "medications": [
+          {"medication_id": "m05", "medication_name": "头孢噻呋", "dosage_per_kg": "5mg", "frequency": "每日1次", "duration_days": 5, "route": "肌肉注射", "notes": "控制继发感染"},
+          {"medication_id": "m09", "medication_name": "氟尼辛葡甲胺", "dosage_per_kg": "2mg", "frequency": "每日1次", "duration_days": 3, "route": "肌肉注射", "notes": "退烧"}
+        ],
+        "oral_medications": [
+          {"medication_name": "板青颗粒", "dosage": "100g拌料200斤", "frequency": "持续", "duration_days": 7, "notes": "清热解毒"},
+          {"medication_name": "电解多维", "dosage": "500g拌料1000斤", "frequency": "持续", "duration_days": 7, "notes": "增强体质"}
+        ],
+        "notes": "乙型脑炎无特效药，以支持疗法为主。灭蚊防蚊预防。"
+      }
+    ],
+    "nursing_care": "灭蚊防蚊，加强饲养管理。",
+    "priority": 2
+  },
+  {
+    "id": "t18", "disease_id": "d18", "disease_name": "猪传染性胃肠炎",
+    "treatment_plans": [
+      {
+        "plan_name": "方案一：口服补液+止泻",
+        "medications": [],
+        "oral_medications": [
+          {"medication_name": "硫酸庆大霉素", "dosage": "仔猪2-3ml/头", "frequency": "每日2次", "duration_days": 3, "notes": "口服，防止细菌继发感染"},
+          {"medication_name": "蒙脱石", "dosage": "仔猪3-5g/头", "frequency": "每日2次", "duration_days": 3, "notes": "止泻保护肠道"},
+          {"medication_name": "口服补液盐", "dosage": "自由饮用", "frequency": "持续", "duration_days": 5, "notes": "防止脱水"}
+        ],
+        "notes": "与流行性腹泻治疗相似，保温是关键。"
+      },
+      {
+        "plan_name": "方案二：杨树花+益生菌",
+        "medications": [],
+        "oral_medications": [
+          {"medication_name": "杨树花口服液", "dosage": "2-3ml/头", "frequency": "每日2次", "duration_days": 3, "notes": "中药止泻"},
+          {"medication_name": "枯草芽孢杆菌", "dosage": "1g/头", "frequency": "每日2次", "duration_days": 5, "notes": "调节肠道菌群"},
+          {"medication_name": "口服补液盐", "dosage": "自由饮用", "frequency": "持续", "duration_days": 5, "notes": "防止脱水"}
+        ],
+        "notes": "中药止泻+益生菌+补液盐。"
+      }
+    ],
+    "nursing_care": "保温箱30-32℃，保持干燥。",
+    "priority": 2
+  },
+  {
+    "id": "t19", "disease_id": "d19", "disease_name": "猪痢疾",
+    "treatment_plans": [
+      {
+        "plan_name": "方案一：乙酰甲喹（首选）",
+        "medications": [
+          {"medication_id": "m37", "medication_name": "乙酰甲喹", "dosage_per_kg": "5mg", "frequency": "每日1次", "duration_days": 5, "route": "肌肉注射", "notes": "首选药物，对螺旋体效果好"}
+        ],
+        "oral_medications": [
+          {"medication_name": "地美硝唑", "dosage": "200g拌料200斤", "frequency": "持续", "duration_days": 7, "notes": "对厌氧菌和螺旋体效果好"},
+          {"medication_name": "硫酸粘杆菌素", "dosage": "5mg/kg体重", "frequency": "每日2次", "duration_days": 5, "notes": "口服，肠道杀菌"}
+        ],
+        "notes": "乙酰甲喹注射+地美硝唑拌料，配合硫酸粘杆菌素口服。"
+      },
+      {
+        "plan_name": "方案二：泰妙菌素方案",
+        "medications": [],
+        "oral_medications": [
+          {"medication_name": "泰妙菌素", "dosage": "100g拌料200斤", "frequency": "持续", "duration_days": 7, "notes": "对螺旋体效果好"},
+          {"medication_name": "地美硝唑", "dosage": "200g拌料200斤", "frequency": "持续", "duration_days": 7, "notes": "对厌氧菌效果好"}
+        ],
+        "notes": "泰妙菌素+地美硝唑拌料。"
+      }
+    ],
+    "nursing_care": "保持圈舍清洁干燥，减少应激。",
+    "priority": 2
+  },
+  {
+    "id": "t20", "disease_id": "d20", "disease_name": "猪增生性回肠炎",
+    "treatment_plans": [
+      {
+        "plan_name": "方案一：泰妙菌素（首选）",
+        "medications": [],
+        "oral_medications": [
+          {"medication_name": "泰妙菌素", "dosage": "100g拌料200斤", "frequency": "持续", "duration_days": 10, "notes": "首选药物，对胞内劳森菌效果好"},
+          {"medication_name": "地美硝唑", "dosage": "200g拌料200斤", "frequency": "持续", "duration_days": 10, "notes": "辅助治疗"}
+        ],
+        "notes": "泰妙菌素对回肠炎效果极好，配合地美硝唑。"
+      },
+      {
+        "plan_name": "方案二：替米考星方案",
+        "medications": [],
+        "oral_medications": [
+          {"medication_name": "替米考星预混剂", "dosage": "200g拌料200斤", "frequency": "持续", "duration_days": 10, "notes": "对胞内劳森菌效果好"},
+          {"medication_name": "多西环素", "dosage": "100g拌料200斤", "frequency": "持续", "duration_days": 10, "notes": "辅助治疗"}
+        ],
+        "notes": "替米考星+多西环素拌料。"
+      }
+    ],
+    "nursing_care": "改善饲养管理，减少应激。",
+    "priority": 2
+  },
+  {
+    "id": "t21", "disease_id": "d21", "disease_name": "猪附红细胞体病",
+    "treatment_plans": [
+      {
+        "plan_name": "方案一：三氮脒（首选）",
+        "medications": [
+          {"medication_id": "m41", "medication_name": "三氮脒", "dosage_per_kg": "5mg", "frequency": "每日1次", "duration_days": 3, "route": "肌肉注射", "notes": "首选药物，对附红体效果好"},
+          {"medication_id": "m16", "medication_name": "维生素C", "dosage_per_kg": "20mg", "frequency": "每日1次", "duration_days": 5, "route": "肌肉注射", "notes": "抗应激"}
+        ],
+        "oral_medications": [
+          {"medication_name": "多西环素", "dosage": "100g拌料200斤", "frequency": "持续", "duration_days": 7, "notes": "对附红体效果好"},
+          {"medication_name": "电解多维", "dosage": "500g拌料1000斤", "frequency": "持续", "duration_days": 7, "notes": "增强体质"}
+        ],
+        "notes": "三氮脒注射+多西环素拌料，配合维C抗应激。"
+      },
+      {
+        "plan_name": "方案二：多西环素方案",
+        "medications": [
+          {"medication_id": "m04", "medication_name": "氟苯尼考", "dosage_per_kg": "20mg", "frequency": "每48小时1次", "duration_days": 3, "route": "肌肉注射", "notes": "对附红体效果好"}
+        ],
+        "oral_medications": [
+          {"medication_name": "多西环素", "dosage": "200g拌料200斤", "frequency": "持续", "duration_days": 7, "notes": "对附红体效果好"},
+          {"medication_name": "电解多维", "dosage": "500g拌料1000斤", "frequency": "持续", "duration_days": 7, "notes": "增强体质"}
+        ],
+        "notes": "氟苯尼考注射+多西环素拌料。"
+      }
+    ],
+    "nursing_care": "灭蚊驱虫，加强饲养管理。",
+    "priority": 2
+  },
+  {
+    "id": "t22", "disease_id": "d22", "disease_name": "猪弓形虫病",
+    "treatment_plans": [
+      {
+        "plan_name": "方案一：磺胺间甲氧嘧啶（首选）",
+        "medications": [
+          {"medication_id": "m42", "medication_name": "磺胺间甲氧嘧啶", "dosage_per_kg": "0.1ml", "frequency": "每日1次", "duration_days": 5, "route": "肌肉注射", "notes": "首选药物，对弓形虫效果好"},
+          {"medication_id": "m09", "medication_name": "氟尼辛葡甲胺", "dosage_per_kg": "2mg", "frequency": "每日1次", "duration_days": 3, "route": "肌肉注射", "notes": "退烧"}
+        ],
+        "oral_medications": [
+          {"medication_name": "磺胺间甲氧嘧啶粉", "dosage": "100g拌料200斤", "frequency": "持续", "duration_days": 7, "notes": "巩固疗效"},
+          {"medication_name": "电解多维", "dosage": "500g拌料1000斤", "frequency": "持续", "duration_days": 7, "notes": "增强体质"}
+        ],
+        "notes": "磺胺间甲氧嘧啶对弓形虫效果极好。首次用量加倍。"
+      },
+      {
+        "plan_name": "方案二：复方磺胺方案",
+        "medications": [
+          {"medication_id": "m98", "medication_name": "复方磺胺间甲氧嘧啶钠", "dosage_per_kg": "0.1ml", "frequency": "每日1次", "duration_days": 5, "route": "肌肉注射", "notes": "复方磺胺，效果更好"}
+        ],
+        "oral_medications": [
+          {"medication_name": "磺胺间甲氧嘧啶粉", "dosage": "100g拌料200斤", "frequency": "持续", "duration_days": 7, "notes": "巩固疗效"},
+          {"medication_name": "电解多维", "dosage": "500g拌料1000斤", "frequency": "持续", "duration_days": 7, "notes": "增强体质"}
+        ],
+        "notes": "复方磺胺注射+磺胺粉拌料。"
+      }
+    ],
+    "nursing_care": "灭鼠，禁止养猫，加强消毒。",
+    "priority": 2
+  },
+  {
+    "id": "t23", "disease_id": "d23", "disease_name": "猪蛔虫病",
+    "treatment_plans": [
+      {
+        "plan_name": "方案一：阿苯达唑",
+        "medications": [],
+        "oral_medications": [
+          {"medication_name": "阿苯达唑", "dosage": "5-10mg/kg体重", "frequency": "单次", "duration_days": 1, "notes": "广谱驱虫药，对蛔虫效果好"}
+        ],
+        "notes": "阿苯达唑口服，单次给药。定期驱虫预防。"
+      },
+      {
+        "plan_name": "方案二：伊维菌素",
+        "medications": [
+          {"medication_id": "m20", "medication_name": "伊维菌素", "dosage_per_kg": "0.3mg", "frequency": "单次", "duration_days": 1, "route": "皮下注射", "notes": "广谱驱虫药"}
+        ],
+        "oral_medications": [],
+        "notes": "伊维菌素皮下注射，对蛔虫效果好。"
+      },
+      {
+        "plan_name": "方案三：阿维菌素透皮液",
+        "medications": [],
+        "oral_medications": [
+          {"medication_name": "阿维菌素透皮液", "dosage": "0.1ml/kg体重", "frequency": "单次", "duration_days": 1, "notes": "透皮吸收，使用方便"}
+        ],
+        "notes": "阿维菌素透皮液浇泼，使用方便。"
+      }
+    ],
+    "nursing_care": "定期驱虫，保持环境卫生。",
+    "priority": 3
+  },
+  {
+    "id": "t24", "disease_id": "d24", "disease_name": "猪疥螨病",
+    "treatment_plans": [
+      {
+        "plan_name": "方案一：伊维菌素+外用",
+        "medications": [
+          {"medication_id": "m20", "medication_name": "伊维菌素", "dosage_per_kg": "0.3mg", "frequency": "间隔7-10天重复", "duration_days": 2, "route": "皮下注射", "notes": "驱螨虫"}
+        ],
+        "oral_medications": [],
+        "topical_medications": [
+          {"medication_name": "双甲脒溶液", "usage": "0.05%溶液喷洒", "frequency": "间隔7-10天重复", "duration_days": 2},
+          {"medication_name": "辛硫磷溶液", "usage": "0.05%溶液喷洒", "frequency": "间隔7-10天重复", "duration_days": 2}
+        ],
+        "notes": "伊维菌素注射+双甲脒或辛硫磷外用，间隔7-10天重复一次（杀灭新孵化的螨虫）。"
+      },
+      {
+        "plan_name": "方案二：阿维菌素透皮液",
+        "medications": [],
+        "oral_medications": [
+          {"medication_name": "阿维菌素透皮液", "dosage": "0.1ml/kg体重", "frequency": "间隔7-10天重复", "duration_days": 2, "notes": "透皮吸收，驱螨虫"}
+        ],
+        "topical_medications": [
+          {"medication_name": "双甲脒溶液", "usage": "0.05%溶液喷洒", "frequency": "间隔7-10天重复", "duration_days": 2}
+        ],
+        "notes": "阿维菌素透皮液浇泼+双甲脒外用。"
+      }
+    ],
+    "nursing_care": "保持圈舍干燥，定期消毒。",
+    "priority": 3
+  },
+  {
+    "id": "t25", "disease_id": "d25", "disease_name": "猪缺铁性贫血",
+    "treatment_plans": [
+      {
+        "plan_name": "方案一：右旋糖酐铁（首选）",
+        "medications": [
+          {"medication_id": "m18", "medication_name": "右旋糖酐铁", "dosage_per_kg": "100-200mg/头", "frequency": "单次", "duration_days": 1, "route": "肌肉注射", "notes": "首选药物，补铁效果好"}
+        ],
+        "oral_medications": [
+          {"medication_name": "维生素B12", "dosage": "0.1-0.3mg/头", "frequency": "每日1次", "duration_days": 3, "notes": "促进造血"}
+        ],
+        "notes": "仔猪出生后3天内注射右旋糖酐铁，预防贫血。"
+      }
+    ],
+    "nursing_care": "仔猪出生后3天内补铁。",
+    "priority": 3
+  },
+  {
+    "id": "t26", "disease_id": "d26", "disease_name": "猪维生素A缺乏症",
+    "treatment_plans": [
+      {
+        "plan_name": "方案一：维生素AD",
+        "medications": [
+          {"medication_id": "m22", "medication_name": "维生素AD注射液", "dosage_per_kg": "1-2ml/头", "frequency": "单次", "duration_days": 1, "route": "肌肉注射", "notes": "补充维生素A和D"}
+        ],
+        "oral_medications": [
+          {"medication_name": "鱼肝油", "dosage": "5-10ml/头", "frequency": "每日1次", "duration_days": 7, "notes": "补充维生素A和D"}
+        ],
+        "notes": "维生素AD注射+鱼肝油口服。饲料中添加青绿饲料预防。"
+      }
+    ],
+    "nursing_care": "补充青绿饲料，改善饲养管理。",
+    "priority": 3
+  },
+  {
+    "id": "t27", "disease_id": "d27", "disease_name": "猪硒缺乏症",
+    "treatment_plans": [
+      {
+        "plan_name": "方案一：亚硒酸钠维生素E（首选）",
+        "medications": [
+          {"medication_id": "m23", "medication_name": "亚硒酸钠维生素E", "dosage_per_kg": "1-2ml/头", "frequency": "单次", "duration_days": 1, "route": "肌肉注射", "notes": "首选药物，补硒和维生素E"}
+        ],
+        "oral_medications": [
+          {"medication_name": "维生素E", "dosage": "100-200mg/头", "frequency": "每日1次", "duration_days": 7, "notes": "辅助治疗"}
+        ],
+        "notes": "亚硒酸钠维生素E注射，饲料中添加亚硒酸钠预防。"
+      }
+    ],
+    "nursing_care": "饲料中添加亚硒酸钠，补充维生素E。",
+    "priority": 3
+  },
+  {
+    "id": "t28", "disease_id": "d28", "disease_name": "猪食盐中毒",
+    "treatment_plans": [
+      {
+        "plan_name": "方案一：对症治疗",
+        "medications": [
+          {"medication_id": "m45", "medication_name": "甘露醇", "dosage_per_kg": "1-2g/kg", "frequency": "单次", "duration_days": 1, "route": "静脉注射", "notes": "降低颅内压"},
+          {"medication_id": "m24", "medication_name": "葡萄糖", "dosage_per_kg": "10-20ml/kg", "frequency": "单次", "duration_days": 1, "route": "静脉注射", "notes": "补充能量"}
+        ],
+        "oral_medications": [
+          {"medication_name": "口服补液盐", "dosage": "自由饮用", "frequency": "持续", "duration_days": 3, "notes": "补充水分"}
+        ],
+        "notes": "立即停喂含盐饲料，少量多次给水。甘露醇降低颅内压，葡萄糖补充能量。"
+      }
+    ],
+    "nursing_care": "立即停喂含盐饲料，少量多次给水，避免大量饮水加重脑水肿。",
+    "priority": 1
+  },
+  {
+    "id": "t29", "disease_id": "d29", "disease_name": "猪霉菌毒素中毒",
+    "treatment_plans": [
+      {
+        "plan_name": "方案一：脱霉+保肝",
+        "medications": [
+          {"medication_id": "m24", "medication_name": "葡萄糖", "dosage_per_kg": "10-20ml/kg", "frequency": "每日1次", "duration_days": 3, "route": "静脉注射", "notes": "保肝解毒"},
+          {"medication_id": "m16", "medication_name": "维生素C", "dosage_per_kg": "20mg", "frequency": "每日1次", "duration_days": 5, "route": "肌肉注射", "notes": "解毒"}
+        ],
+        "oral_medications": [
+          {"medication_name": "脱霉剂", "dosage": "2kg拌料1吨", "frequency": "持续", "duration_days": 7, "notes": "吸附霉菌毒素"},
+          {"medication_name": "电解多维", "dosage": "500g拌料1000斤", "frequency": "持续", "duration_days": 7, "notes": "增强体质"},
+          {"medication_name": "龙胆泻肝散", "dosage": "100g拌料200斤", "frequency": "持续", "duration_days": 7, "notes": "清肝利胆"}
+        ],
+        "notes": "立即停喂霉变饲料，添加脱霉剂。葡萄糖+维C保肝解毒。"
+      }
+    ],
+    "nursing_care": "立即停喂霉变饲料，改善饲料储存条件。",
+    "priority": 2
+  },
+  {
+    "id": "t30", "disease_id": "d30", "disease_name": "猪中暑",
+    "treatment_plans": [
+      {
+        "plan_name": "方案一：紧急降温",
+        "medications": [
+          {"medication_id": "m09", "medication_name": "氟尼辛葡甲胺", "dosage_per_kg": "2mg", "frequency": "单次", "duration_days": 1, "route": "肌肉注射", "notes": "退烧"},
+          {"medication_id": "m16", "medication_name": "维生素C", "dosage_per_kg": "20mg", "frequency": "单次", "duration_days": 1, "route": "肌肉注射", "notes": "抗应激"},
+          {"medication_id": "m24", "medication_name": "葡萄糖", "dosage_per_kg": "10-20ml/kg", "frequency": "单次", "duration_days": 1, "route": "静脉注射", "notes": "补充能量"}
+        ],
+        "oral_medications": [
+          {"medication_name": "口服补液盐", "dosage": "自由饮用", "frequency": "持续", "duration_days": 3, "notes": "补充水分和电解质"}
+        ],
+        "notes": "立即将猪转移到阴凉处，用冷水浇头和全身。氟尼辛退烧，维C抗应激。"
+      }
+    ],
+    "nursing_care": "立即将猪转移到阴凉处，用冷水浇头和全身，风扇吹风降温。",
+    "priority": 1
+  },
+  {
+    "id": "t31", "disease_id": "d31", "disease_name": "猪感冒",
+    "treatment_plans": [
+      {
+        "plan_name": "方案一：荆防败毒散",
+        "medications": [
+          {"medication_id": "m09", "medication_name": "氟尼辛葡甲胺", "dosage_per_kg": "2mg", "frequency": "每日1次", "duration_days": 3, "route": "肌肉注射", "notes": "退烧"}
+        ],
+        "oral_medications": [
+          {"medication_name": "荆防败毒散", "dosage": "100g拌料200斤", "frequency": "持续", "duration_days": 5, "notes": "发汗解表，散风祛湿"},
+          {"medication_name": "板蓝根颗粒", "dosage": "100g拌料200斤", "frequency": "持续", "duration_days": 5, "notes": "清热解毒"},
+          {"medication_name": "电解多维", "dosage": "500g拌料1000斤", "frequency": "持续", "duration_days": 5, "notes": "增强体质"}
+        ],
+        "notes": "风寒感冒初期用荆防败毒散，配合板蓝根和多维。"
+      },
+      {
+        "plan_name": "方案二：柴胡+板蓝根",
+        "medications": [],
+        "oral_medications": [
+          {"medication_name": "柴胡口服液", "dosage": "1-2ml/kg体重", "frequency": "每日2次", "duration_days": 3, "notes": "中药退烧，温和不伤胃"},
+          {"medication_name": "板蓝根颗粒", "dosage": "100g拌料200斤", "frequency": "持续", "duration_days": 5, "notes": "清热解毒"},
+          {"medication_name": "甘草颗粒", "dosage": "100g拌料200斤", "frequency": "持续", "duration_days": 5, "notes": "润肺止咳"}
+        ],
+        "notes": "中药退烧方案：柴胡+板蓝根+甘草。"
+      }
+    ],
+    "nursing_care": "做好保温，减少应激。",
+    "priority": 3
+  },
+  {
+    "id": "t32", "disease_id": "d32", "disease_name": "猪便秘",
+    "treatment_plans": [
+      {
+        "plan_name": "方案一：硫酸镁通便",
+        "medications": [],
+        "oral_medications": [
+          {"medication_name": "硫酸镁", "dosage": "50-100g/头", "frequency": "单次", "duration_days": 1, "notes": "泻下通便"},
+          {"medication_name": "人工盐", "dosage": "50-100g/头", "frequency": "每日1次", "duration_days": 3, "notes": "健胃通便"},
+          {"medication_name": "碳酸氢钠", "dosage": "5-10g/头", "frequency": "每日1次", "duration_days": 3, "notes": "中和胃酸"}
+        ],
+        "notes": "硫酸镁通便，配合人工盐健胃。保证充足饮水。"
+      },
+      {
+        "plan_name": "方案二：灌肠+益生菌",
+        "medications": [],
+        "oral_medications": [
+          {"medication_name": "温肥皂水", "dosage": "适量灌肠", "frequency": "每日1次", "duration_days": 2, "notes": "软化粪便"},
+          {"medication_name": "乳酶生", "dosage": "5g/头", "frequency": "每日2次", "duration_days": 5, "notes": "调节肠道菌群"},
+          {"medication_name": "枯草芽孢杆菌", "dosage": "1g/头", "frequency": "每日2次", "duration_days": 5, "notes": "促进肠道蠕动"}
+        ],
+        "notes": "温肥皂水灌肠软化粪便，配合益生菌调节肠道。"
+      }
+    ],
+    "nursing_care": "保证充足饮水，增加饲料中纤维含量。",
+    "priority": 3
+  },
+  {
+    "id": "t33", "disease_id": "d33", "disease_name": "猪胃溃疡",
+    "treatment_plans": [
+      {
+        "plan_name": "方案一：西咪替丁+止血",
+        "medications": [
+          {"medication_id": "m26", "medication_name": "西咪替丁", "dosage_per_kg": "5-10mg", "frequency": "每日2次", "duration_days": 5, "route": "肌肉注射", "notes": "抑制胃酸分泌"},
+          {"medication_id": "m87", "medication_name": "止血敏", "dosage_per_kg": "2-4ml/头", "frequency": "每日1次", "duration_days": 3, "route": "肌肉注射", "notes": "止血"}
+        ],
+        "oral_medications": [
+          {"medication_name": "碳酸氢钠", "dosage": "5-10g/头", "frequency": "每日2次", "duration_days": 5, "notes": "中和胃酸"},
+          {"medication_name": "蒙脱石", "dosage": "5-10g/头", "frequency": "每日2次", "duration_days": 5, "notes": "保护胃黏膜"}
+        ],
+        "notes": "西咪替丁抑制胃酸+止血敏止血，配合碳酸氢钠和蒙脱石。"
+      }
+    ],
+    "nursing_care": "避免饲料过细，减少应激，提供易消化饲料。",
+    "priority": 2
+  },
+  {
+    "id": "t34", "disease_id": "d34", "disease_name": "猪乳房炎",
+    "treatment_plans": [
+      {
+        "plan_name": "方案一：头孢+鱼石脂外敷",
+        "medications": [
+          {"medication_id": "m05", "medication_name": "头孢噻呋", "dosage_per_kg": "5mg", "frequency": "每日1次", "duration_days": 5, "route": "肌肉注射", "notes": "控制感染"},
+          {"medication_id": "m09", "medication_name": "氟尼辛葡甲胺", "dosage_per_kg": "2mg", "frequency": "每日1次", "duration_days": 3, "route": "肌肉注射", "notes": "消炎镇痛"}
+        ],
+        "oral_medications": [],
+        "topical_medications": [
+          {"medication_name": "鱼石脂软膏", "usage": "涂抹乳房肿胀处", "frequency": "每日2次", "duration_days": 5}
+        ],
+        "notes": "头孢+氟尼辛注射，鱼石脂软膏外敷消炎。"
+      },
+      {
+        "plan_name": "方案二：氨苄西林方案",
+        "medications": [
+          {"medication_id": "m53", "medication_name": "氨苄西林", "dosage_per_kg": "15mg", "frequency": "每日2次", "duration_days": 5, "route": "肌肉注射", "notes": "控制感染"}
+        ],
+        "oral_medications": [],
+        "topical_medications": [
+          {"medication_name": "鱼石脂软膏", "usage": "涂抹乳房肿胀处", "frequency": "每日2次", "duration_days": 5}
+        ],
+        "notes": "氨苄西林注射+鱼石脂外敷。"
+      }
+    ],
+    "nursing_care": "保持产房清洁，做好乳房护理。",
+    "priority": 2
+  },
+  {
+    "id": "t35", "disease_id": "d35", "disease_name": "猪子宫内膜炎",
+    "treatment_plans": [
+      {
+        "plan_name": "方案一：头孢+宫炎净灌注",
+        "medications": [
+          {"medication_id": "m05", "medication_name": "头孢噻呋", "dosage_per_kg": "5mg", "frequency": "每日1次", "duration_days": 5, "route": "肌肉注射", "notes": "控制感染"},
+          {"medication_id": "m09", "medication_name": "氟尼辛葡甲胺", "dosage_per_kg": "2mg", "frequency": "每日1次", "duration_days": 3, "route": "肌肉注射", "notes": "消炎"}
+        ],
+        "oral_medications": [
+          {"medication_name": "益母生化散", "dosage": "200g拌料200斤", "frequency": "持续", "duration_days": 7, "notes": "活血化瘀，促进子宫复旧"}
+        ],
+        "topical_medications": [
+          {"medication_name": "宫炎净", "usage": "子宫灌注50-100ml", "frequency": "每日1次", "duration_days": 3}
+        ],
+        "notes": "头孢+氟尼辛注射，宫炎净子宫灌注，配合益母生化散拌料。"
+      },
+      {
+        "plan_name": "方案二：氨苄西林+缩宫素",
+        "medications": [
+          {"medication_id": "m53", "medication_name": "氨苄西林", "dosage_per_kg": "15mg", "frequency": "每日2次", "duration_days": 5, "route": "肌肉注射", "notes": "控制感染"},
+          {"medication_id": "m83", "medication_name": "缩宫素", "dosage_per_kg": "10-30单位/头", "frequency": "每日1次", "duration_days": 3, "route": "肌肉注射", "notes": "促进子宫收缩，排出恶露"}
+        ],
+        "oral_medications": [
+          {"medication_name": "益母生化散", "dosage": "200g拌料200斤", "frequency": "持续", "duration_days": 7, "notes": "活血化瘀"}
+        ],
+        "notes": "氨苄西林+缩宫素注射，配合益母生化散。"
+      }
+    ],
+    "nursing_care": "做好产房消毒，产后消炎。",
+    "priority": 2
+  },
+  {
+    "id": "t36", "disease_id": "d36", "disease_name": "猪蹄裂",
+    "treatment_plans": [
+      {
+        "plan_name": "方案一：生物素+外用",
+        "medications": [],
+        "oral_medications": [
+          {"medication_name": "生物素", "dosage": "0.1-0.2mg/头", "frequency": "每日1次", "duration_days": 14, "notes": "促进蹄壳修复"}
+        ],
+        "topical_medications": [
+          {"medication_name": "鱼石脂软膏", "usage": "涂抹蹄裂处", "frequency": "每日1次", "duration_days": 7},
+          {"medication_name": "松馏油", "usage": "涂抹蹄裂处", "frequency": "每日1次", "duration_days": 7}
+        ],
+        "notes": "生物素口服促进蹄壳修复，鱼石脂或松馏油外用保护蹄部。"
+      }
+    ],
+    "nursing_care": "保持地面干燥，补充生物素。",
+    "priority": 3
+  },
+  {
+    "id": "t37", "disease_id": "d37", "disease_name": "猪应激综合征",
+    "treatment_plans": [
+      {
+        "plan_name": "方案一：镇静+降温",
+        "medications": [
+          {"medication_id": "m51", "medication_name": "氯丙嗪", "dosage_per_kg": "1-2mg", "frequency": "单次", "duration_days": 1, "route": "肌肉注射", "notes": "镇静"},
+          {"medication_id": "m09", "medication_name": "氟尼辛葡甲胺", "dosage_per_kg": "2mg", "frequency": "单次", "duration_days": 1, "route": "肌肉注射", "notes": "退烧"},
+          {"medication_id": "m16", "medication_name": "维生素C", "dosage_per_kg": "20mg", "frequency": "单次", "duration_days": 1, "route": "肌肉注射", "notes": "抗应激"}
+        ],
+        "oral_medications": [
+          {"medication_name": "口服补液盐", "dosage": "自由饮用", "frequency": "持续", "duration_days": 3, "notes": "补充水分和电解质"}
+        ],
+        "notes": "氯丙嗪镇静+氟尼辛退烧+维C抗应激。立即转移到安静环境。"
+      }
+    ],
+    "nursing_care": "减少应激因素，选育抗应激品种。",
+    "priority": 1
+  },
+  {
+    "id": "t38", "disease_id": "d38", "disease_name": "猪异食癖",
+    "treatment_plans": [
+      {
+        "plan_name": "方案一：补充营养",
+        "medications": [],
+        "oral_medications": [
+          {"medication_name": "电解多维", "dosage": "500g拌料1000斤", "frequency": "持续", "duration_days": 14, "notes": "补充维生素和矿物质"},
+          {"medication_name": "微量元素添加剂", "dosage": "按说明使用", "frequency": "持续", "duration_days": 14, "notes": "补充微量元素"},
+          {"medication_name": "食盐", "dosage": "0.3-0.5%拌料", "frequency": "持续", "duration_days": 14, "notes": "补充钠和氯"}
+        ],
+        "notes": "补充营养，改善饲养环境，降低饲养密度。"
+      }
+    ],
+    "nursing_care": "改善饲养环境，降低饲养密度，提供玩具。",
+    "priority": 3
+  },
+  {
+    "id": "t39", "disease_id": "d39", "disease_name": "猪渗出性皮炎",
+    "treatment_plans": [
+      {
+        "plan_name": "方案一：头孢+外用消毒",
+        "medications": [
+          {"medication_id": "m05", "medication_name": "头孢噻呋", "dosage_per_kg": "5mg", "frequency": "每日1次", "duration_days": 5, "route": "肌肉注射", "notes": "控制感染"}
+        ],
+        "oral_medications": [],
+        "topical_medications": [
+          {"medication_name": "聚维酮碘", "usage": "1:500稀释清洗患处", "frequency": "每日2次", "duration_days": 7},
+          {"medication_name": "紫药水", "usage": "涂抹患处", "frequency": "每日2次", "duration_days": 7}
+        ],
+        "notes": "头孢注射控制感染，聚维酮碘清洗患处，紫药水涂抹。"
+      }
+    ],
+    "nursing_care": "保持环境清洁，减少外伤。",
+    "priority": 2
+  },
+  {
+    "id": "t40", "disease_id": "d40", "disease_name": "猪坏死性杆菌病",
+    "treatment_plans": [
+      {
+        "plan_name": "方案一：青霉素+外用清创",
+        "medications": [
+          {"medication_id": "m01", "medication_name": "青霉素钾/钠", "dosage_per_kg": "6万单位", "frequency": "每日2次", "duration_days": 5, "route": "肌肉注射", "notes": "对厌氧菌效果好"}
+        ],
+        "oral_medications": [],
+        "topical_medications": [
+          {"medication_name": "双氧水", "usage": "3%溶液清洗创面", "frequency": "每日2次", "duration_days": 7},
+          {"medication_name": "高锰酸钾", "usage": "0.1%溶液清洗创面", "frequency": "每日2次", "duration_days": 7},
+          {"medication_name": "紫药水", "usage": "涂抹创面", "frequency": "每日2次", "duration_days": 7}
+        ],
+        "notes": "青霉素注射+双氧水或高锰酸钾清创+紫药水涂抹。"
+      }
+    ],
+    "nursing_care": "减少外伤，保持环境干燥。",
+    "priority": 2
+  },
+  {
+    "id": "t41", "disease_id": "d41", "disease_name": "脱肛",
+    "treatment_plans": [
+      {
+        "plan_name": "方案一：整复+消炎",
+        "medications": [
+          {"medication_id": "m05", "medication_name": "头孢噻呋", "dosage_per_kg": "5mg", "frequency": "每日1次", "duration_days": 3, "route": "肌肉注射", "notes": "预防感染"}
+        ],
+        "oral_medications": [
+          {"medication_name": "硫酸镁", "dosage": "50-100g/头", "frequency": "单次", "duration_days": 1, "notes": "通便，减少努责"}
+        ],
+        "topical_medications": [
+          {"medication_name": "高锰酸钾", "usage": "0.1%溶液清洗脱出部分", "frequency": "术前", "duration_days": 1},
+          {"medication_name": "紫药水", "usage": "涂抹脱出部分消肿", "frequency": "术前", "duration_days": 1}
+        ],
+        "notes": "高锰酸钾清洗脱出部分，紫药水消肿后整复，荷包缝合。头孢预防感染。"
+      }
+    ],
+    "nursing_care": "避免便秘、腹泻、剧烈咳嗽，控制饲料中粗纤维含量。",
+    "priority": 2
+  },
+  {
+    "id": "t42", "disease_id": "d42", "disease_name": "仔猪水肿病",
+    "treatment_plans": [
+      {
+        "plan_name": "方案一：甘露醇+地塞米松",
+        "medications": [
+          {"medication_id": "m45", "medication_name": "甘露醇", "dosage_per_kg": "1-2g/kg", "frequency": "单次", "duration_days": 1, "route": "静脉注射", "notes": "降低颅内压"},
+          {"medication_id": "m10", "medication_name": "地塞米松", "dosage_per_kg": "0.1-0.2mg", "frequency": "每日1次", "duration_days": 3, "route": "肌肉注射", "notes": "抗炎抗水肿"},
+          {"medication_id": "m03", "medication_name": "恩诺沙星", "dosage_per_kg": "5mg", "frequency": "每日1次", "duration_days": 3, "route": "肌肉注射", "notes": "控制大肠杆菌"}
+        ],
+        "oral_medications": [
+          {"medication_name": "硫酸镁", "dosage": "20-30g/头", "frequency": "单次", "duration_days": 1, "notes": "泻下，排出毒素"}
+        ],
+        "notes": "甘露醇降低颅内压，地塞米松抗水肿，恩诺沙星控制大肠杆菌。"
+      }
+    ],
+    "nursing_care": "断奶后逐渐换料，避免饲料突变，减少应激。",
+    "priority": 1
+  },
+  {
+    "id": "t43", "disease_id": "d43", "disease_name": "魏氏梭菌胀气病",
+    "treatment_plans": [
+      {
+        "plan_name": "方案一：紧急排气+甲硝唑",
+        "medications": [
+          {"medication_id": "m40", "medication_name": "地美硝唑", "dosage_per_kg": "拌料", "frequency": "持续", "duration_days": 5, "route": "拌料", "notes": "对厌氧菌效果好"}
+        ],
+        "oral_medications": [
+          {"medication_name": "甲硝唑", "dosage": "10-15mg/kg体重", "frequency": "每日2次", "duration_days": 3, "notes": "对厌氧菌效果好"},
+          {"medication_name": "乳酶生", "dosage": "5g/头", "frequency": "每日2次", "duration_days": 5, "notes": "调节肠道菌群"}
+        ],
+        "notes": "紧急穿刺排气，甲硝唑口服+地美硝唑拌料。预防为主：避免饲料突变，添加益生菌。"
+      }
+    ],
+    "nursing_care": "避免饲料突变，添加益生菌，减少应激。",
+    "priority": 1
+  },
+  {
+    "id": "t44", "disease_id": "d44", "disease_name": "李氏杆菌病",
+    "treatment_plans": [
+      {
+        "plan_name": "方案一：青霉素+磺胺嘧啶钠",
+        "medications": [
+          {"medication_id": "m01", "medication_name": "青霉素钾/钠", "dosage_per_kg": "6万单位", "frequency": "每日2-3次", "duration_days": 5, "route": "肌肉注射", "notes": "对李氏杆菌效果好"},
+          {"medication_id": "m97", "medication_name": "磺胺嘧啶钠", "dosage_per_kg": "0.1ml", "frequency": "每日2次", "duration_days": 5, "route": "肌肉注射", "notes": "能透过血脑屏障"}
+        ],
+        "oral_medications": [
+          {"medication_name": "电解多维", "dosage": "500g拌料1000斤", "frequency": "持续", "duration_days": 7, "notes": "增强体质"}
+        ],
+        "notes": "青霉素+磺胺嘧啶钠，磺胺嘧啶钠能透过血脑屏障治疗脑膜炎型。"
+      }
+    ],
+    "nursing_care": "灭鼠，加强消毒，避免饲喂霉变饲料。",
+    "priority": 2
+  },
+  {
+    "id": "t45", "disease_id": "d45", "disease_name": "猪萎缩性鼻炎",
+    "treatment_plans": [
+      {
+        "plan_name": "方案一：替米考星+多西环素",
+        "medications": [
+          {"medication_id": "m33", "medication_name": "替米考星", "dosage_per_kg": "10mg", "frequency": "每48小时1次", "duration_days": 3, "route": "肌肉注射", "notes": "控制支气管败血波氏杆菌"}
+        ],
+        "oral_medications": [
+          {"medication_name": "替米考星预混剂", "dosage": "200g拌料200斤", "frequency": "持续", "duration_days": 10, "notes": "控制感染"},
+          {"medication_name": "多西环素", "dosage": "100g拌料200斤", "frequency": "持续", "duration_days": 10, "notes": "控制继发感染"},
+          {"medication_name": "麻杏石甘散", "dosage": "100g拌料200斤", "frequency": "持续", "duration_days": 10, "notes": "止咳平喘"}
+        ],
+        "notes": "替米考星+多西环素拌料，配合中药止咳。"
+      },
+      {
+        "plan_name": "方案二：泰乐菌素方案",
+        "medications": [
+          {"medication_id": "m55", "medication_name": "泰乐菌素", "dosage_per_kg": "10mg", "frequency": "每日1次", "duration_days": 5, "route": "肌肉注射", "notes": "控制感染"}
+        ],
+        "oral_medications": [
+          {"medication_name": "泰乐菌素预混剂", "dosage": "200g拌料200斤", "frequency": "持续", "duration_days": 10, "notes": "控制感染"},
+          {"medication_name": "麻杏石甘散", "dosage": "100g拌料200斤", "frequency": "持续", "duration_days": 10, "notes": "止咳平喘"}
+        ],
+        "notes": "泰乐菌素注射+拌料，配合中药止咳。"
+      }
+    ],
+    "nursing_care": "改善通风，药物预防。",
+    "priority": 2
+  },
+  {
+    "id": "t46", "disease_id": "d46", "disease_name": "浅表性胃炎",
+    "treatment_plans": [
+      {
+        "plan_name": "方案一：健胃+益生菌",
+        "medications": [],
+        "oral_medications": [
+          {"medication_name": "人工盐", "dosage": "50-100g/头", "frequency": "每日1次", "duration_days": 3, "notes": "健胃通便"},
+          {"medication_name": "碳酸氢钠", "dosage": "5-10g/头", "frequency": "每日2次", "duration_days": 3, "notes": "中和胃酸"},
+          {"medication_name": "乳酶生", "dosage": "5g/头", "frequency": "每日2次", "duration_days": 5, "notes": "调节肠道菌群"},
+          {"medication_name": "大蒜素", "dosage": "拌料50g/吨", "frequency": "持续", "duration_days": 7, "notes": "促进消化"}
+        ],
+        "notes": "人工盐健胃+碳酸氢钠中和胃酸+乳酶生调节菌群。"
+      }
+    ],
+    "nursing_care": "定时定量饲喂，避免饲料过冷过热。",
+    "priority": 3
+  },
+  {
+    "id": "t47", "disease_id": "d47", "disease_name": "胎衣不下",
+    "treatment_plans": [
+      {
+        "plan_name": "方案一：缩宫素+抗生素",
+        "medications": [
+          {"medication_id": "m83", "medication_name": "缩宫素", "dosage_per_kg": "10-30单位/头", "frequency": "每2小时1次，最多3次", "duration_days": 1, "route": "肌肉注射", "notes": "促进子宫收缩，排出胎衣"},
+          {"medication_id": "m05", "medication_name": "头孢噻呋", "dosage_per_kg": "5mg", "frequency": "每日1次", "duration_days": 5, "route": "肌肉注射", "notes": "预防感染"}
+        ],
+        "oral_medications": [
+          {"medication_name": "益母生化散", "dosage": "200g拌料200斤", "frequency": "持续", "duration_days": 7, "notes": "活血化瘀，促进子宫复旧"}
+        ],
+        "notes": "缩宫素促进子宫收缩排出胎衣，头孢预防感染，益母生化散促进子宫复旧。"
+      },
+      {
+        "plan_name": "方案二：氯前列烯醇方案",
+        "medications": [
+          {"medication_id": "m84", "medication_name": "氯前列烯醇", "dosage_per_kg": "0.1-0.2mg/头", "frequency": "单次", "duration_days": 1, "route": "肌肉注射", "notes": "溶解黄体，促进子宫收缩"},
+          {"medication_id": "m05", "medication_name": "头孢噻呋", "dosage_per_kg": "5mg", "frequency": "每日1次", "duration_days": 5, "route": "肌肉注射", "notes": "预防感染"}
+        ],
+        "oral_medications": [
+          {"medication_name": "益母生化散", "dosage": "200g拌料200斤", "frequency": "持续", "duration_days": 7, "notes": "活血化瘀"}
+        ],
+        "notes": "氯前列烯醇溶解黄体促进子宫收缩，头孢预防感染。"
+      }
+    ],
+    "nursing_care": "加强妊娠期饲养管理，避免难产。",
+    "priority": 2
+  },
+  {
+    "id": "t48", "disease_id": "d48", "disease_name": "母猪无乳综合征",
+    "treatment_plans": [
+      {
+        "plan_name": "方案一：缩宫素+消炎",
+        "medications": [
+          {"medication_id": "m83", "medication_name": "缩宫素", "dosage_per_kg": "10-30单位/头", "frequency": "每日1-2次", "duration_days": 3, "route": "肌肉注射", "notes": "促进泌乳"},
+          {"medication_id": "m05", "medication_name": "头孢噻呋", "dosage_per_kg": "5mg", "frequency": "每日1次", "duration_days": 5, "route": "肌肉注射", "notes": "控制感染"},
+          {"medication_id": "m09", "medication_name": "氟尼辛葡甲胺", "dosage_per_kg": "2mg", "frequency": "每日1次", "duration_days": 3, "route": "肌肉注射", "notes": "消炎镇痛"}
+        ],
+        "oral_medications": [
+          {"medication_name": "王不留行", "dosage": "20g/头", "frequency": "每日1次", "duration_days": 5, "notes": "通乳"},
+          {"medication_name": "电解多维", "dosage": "500g拌料1000斤", "frequency": "持续", "duration_days": 7, "notes": "增强体质"}
+        ],
+        "notes": "缩宫素促进泌乳，头孢+氟尼辛消炎，王不留行通乳。"
+      },
+      {
+        "plan_name": "方案二：苯甲酸雌二醇+缩宫素",
+        "medications": [
+          {"medication_id": "m85", "medication_name": "苯甲酸雌二醇", "dosage_per_kg": "1-2mg/头", "frequency": "单次", "duration_days": 1, "route": "肌肉注射", "notes": "促进乳腺发育"},
+          {"medication_id": "m83", "medication_name": "缩宫素", "dosage_per_kg": "10-30单位/头", "frequency": "每日1-2次", "duration_days": 3, "route": "肌肉注射", "notes": "促进泌乳"}
+        ],
+        "oral_medications": [
+          {"medication_name": "王不留行", "dosage": "20g/头", "frequency": "每日1次", "duration_days": 5, "notes": "通乳"},
+          {"medication_name": "电解多维", "dosage": "500g拌料1000斤", "frequency": "持续", "duration_days": 7, "notes": "增强体质"}
+        ],
+        "notes": "苯甲酸雌二醇促进乳腺发育，缩宫素促进泌乳。"
+      }
+    ],
+    "nursing_care": "加强妊娠期饲养管理，做好产房消毒。",
+    "priority": 2
+  },
+  {
+    "id": "t49", "disease_id": "d49", "disease_name": "难产",
+    "treatment_plans": [
+      {
+        "plan_name": "方案一：缩宫素助产",
+        "medications": [
+          {"medication_id": "m83", "medication_name": "缩宫素", "dosage_per_kg": "10-30单位/头", "frequency": "每30分钟1次，最多3次", "duration_days": 1, "route": "肌肉注射", "notes": "促进子宫收缩"}
+        ],
+        "oral_medications": [],
+        "notes": "缩宫素助产，每次10-30单位，间隔30分钟，最多3次。无效则人工助产或剖腹产。"
+      },
+      {
+        "plan_name": "方案二：人工助产+消炎",
+        "medications": [
+          {"medication_id": "m05", "medication_name": "头孢噻呋", "dosage_per_kg": "5mg", "frequency": "每日1次", "duration_days": 5, "route": "肌肉注射", "notes": "预防感染"},
+          {"medication_id": "m09", "medication_name": "氟尼辛葡甲胺", "dosage_per_kg": "2mg", "frequency": "每日1次", "duration_days": 3, "route": "肌肉注射", "notes": "消炎镇痛"}
+        ],
+        "oral_medications": [
+          {"medication_name": "益母生化散", "dosage": "200g拌料200斤", "frequency": "持续", "duration_days": 7, "notes": "活血化瘀，促进子宫复旧"}
+        ],
+        "notes": "人工助产或剖腹产后，头孢+氟尼辛消炎，益母生化散促进子宫复旧。"
+      }
+    ],
+    "nursing_care": "加强妊娠期饲养管理，避免母猪过肥或过瘦。",
+    "priority": 1
+  }
+]
