@@ -1,0 +1,102 @@
+<!-- pages/index/index.wxml -->
+<view class="container">
+  <!-- 顶部开发者信息 -->
+  <view class="developer-info">
+    <text class="developer-text">{{texts.developer}}</text>
+  </view>
+
+  <!-- 诊断卡片 -->
+  <view class="diagnosis-card" bindtap="goToDiagnosis">
+    <view class="tag">{{texts.aiDiagnosis}}</view>
+    <view class="title">{{texts.startDiagnosis}}</view>
+    <view class="subtitle">{{texts.selectSymptoms}}</view>
+    <view class="icon-circle">
+      <text class="icon-text">🩺</text>
+    </view>
+  </view>
+
+  <!-- 功能网格 -->
+  <view class="section-header">
+    <text class="section-icon">📊</text>
+    <text class="title">{{texts.quickEntry}}</text>
+  </view>
+  <view class="feature-grid">
+    <view class="feature-item" bindtap="goToDiagnosis">
+      <view class="icon-wrapper" style="background-color: rgba(255, 107, 129, 0.1);">
+        <text class="feature-icon">🔬</text>
+      </view>
+      <view class="info">
+        <view class="name">{{texts.diseaseDiagnosis}}</view>
+        <view class="desc">{{texts.symptomDiagnosis}}</view>
+      </view>
+    </view>
+    <view class="feature-item" bindtap="goToVaccination">
+      <view class="icon-wrapper" style="background-color: rgba(90, 200, 250, 0.1);">
+        <text class="feature-icon">💉</text>
+      </view>
+      <view class="info">
+        <view class="name">{{language === 'en' ? 'Vaccination' : '疫苗接种流程'}}</view>
+        <view class="desc">{{language === 'en' ? 'Immunization schedule' : '各阶段免疫程序'}}</view>
+      </view>
+    </view>
+    <view class="feature-item" bindtap="goToPigPrice">
+      <view class="icon-wrapper" style="background-color: rgba(46, 213, 115, 0.1);">
+        <text class="feature-icon">💰</text>
+      </view>
+      <view class="info">
+        <view class="name">{{language === 'en' ? 'Pig Price' : '今日猪价'}}</view>
+        <view class="desc">{{language === 'en' ? 'Provincial prices' : '各省份今日猪价'}}</view>
+      </view>
+    </view>
+    <view class="feature-item" bindtap="goToBreedingTips">
+      <view class="icon-wrapper" style="background-color: rgba(46, 213, 115, 0.1);">
+        <text class="feature-icon">📚</text>
+      </view>
+      <view class="info">
+        <view class="name">{{language === 'en' ? 'Breeding Tips' : '养殖技巧'}}</view>
+        <view class="desc">{{language === 'en' ? 'Practical tips' : '实用养殖技巧'}}</view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 常见疾病 -->
+  <view class="section-header">
+    <text class="section-icon">🏥</text>
+    <text class="title">{{texts.commonDiseases}}</text>
+    <view class="more" bindtap="goToEncyclopedia">{{texts.viewAll}}</view>
+  </view>
+  <view class="disease-list">
+    <view class="disease-item" wx:for="{{highSeverityDiseases}}" wx:key="id" bindtap="goToDiseaseDetail" data-id="{{item.id}}">
+      <view class="icon-wrapper" style="background-color: rgba(255, 71, 87, 0.1);">
+        <text class="disease-icon">⚠️</text>
+      </view>
+      <view class="content">
+        <view class="name">{{item.name}}</view>
+        <view class="desc">{{item.description}}</view>
+        <view class="tags">
+          <view class="tag tag-danger">{{texts.highRisk}}</view>
+          <view class="tag tag-primary" wx:if="{{item.is_contagious}}">{{texts.contagious}}</view>
+        </view>
+      </view>
+      <text class="arrow">›</text>
+    </view>
+  </view>
+
+  <!-- 数据统计 -->
+  <view class="stats-card">
+    <view class="stat-item">
+      <view class="stat-value">{{diseases.length}}</view>
+      <view class="stat-label">{{texts.diseaseTypes}}</view>
+    </view>
+    <view class="stat-divider"></view>
+    <view class="stat-item">
+      <view class="stat-value">{{symptoms.length}}</view>
+      <view class="stat-label">{{texts.symptomTypes}}</view>
+    </view>
+    <view class="stat-divider"></view>
+    <view class="stat-item">
+      <view class="stat-value">{{medications.length}}</view>
+      <view class="stat-label">{{texts.medicationTypes}}</view>
+    </view>
+  </view>
+</view>

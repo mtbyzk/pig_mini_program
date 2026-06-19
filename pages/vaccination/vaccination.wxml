@@ -1,0 +1,63 @@
+<!-- pages/vaccination/vaccination.wxml -->
+<view class="container">
+  <!-- 顶部提示 -->
+  <view class="tip-card">
+    <view class="tip-icon">
+      <text class="tip-icon-text">💉</text>
+    </view>
+    <view class="tip-text">科学免疫，预防为主。以下为各阶段猪只推荐免疫程序。</view>
+  </view>
+
+  <!-- 阶段选择 -->
+  <scroll-view scroll-x class="stage-scroll">
+    <view class="stage-selector">
+      <view 
+        wx:for="{{stages}}" 
+        wx:key="key"
+        class="stage-tag {{selectedStage === item.key ? 'active' : ''}}" 
+        bindtap="selectStage" 
+        data-stage="{{item.key}}"
+      >{{item.label}}</view>
+    </view>
+  </scroll-view>
+
+  <!-- 疫苗列表 -->
+  <view class="vaccine-list">
+    <view class="vaccine-item" wx:for="{{filteredVaccines}}" wx:key="id">
+      <view class="vaccine-header">
+        <view class="vaccine-name">
+          <text class="name-text">{{item.name}}</text>
+          <view class="importance-tag {{item.importance === 'high' ? 'high' : 'medium'}}">
+            {{item.importance === 'high' ? '必做' : '推荐'}}
+          </view>
+        </view>
+        <view class="stage-badge">{{item.stageName}}</view>
+      </view>
+      
+      <view class="vaccine-info">
+        <view class="info-row">
+          <text class="info-label">接种时间</text>
+          <text class="info-value">{{item.time}}</text>
+        </view>
+        <view class="info-row">
+          <text class="info-label">剂量</text>
+          <text class="info-value">{{item.dosage}}</text>
+        </view>
+        <view class="info-row">
+          <text class="info-label">接种方式</text>
+          <text class="info-value">{{item.route}}</text>
+        </view>
+        <view class="info-row" wx:if="{{item.notes}}">
+          <text class="info-label">备注</text>
+          <text class="info-value notes">{{item.notes}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 空状态 -->
+  <view class="empty-state" wx:if="{{filteredVaccines.length === 0}}">
+    <text class="empty-icon">💉</text>
+    <view class="text">暂无该阶段疫苗信息</view>
+  </view>
+</view>

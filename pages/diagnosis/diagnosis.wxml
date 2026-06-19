@@ -1,0 +1,59 @@
+<!-- pages/diagnosis/diagnosis.wxml -->
+<view class="container">
+  <!-- 顶部提示 -->
+  <view class="tip-card">
+    <view class="tip-icon">
+      <text class="tip-icon-text">ℹ️</text>
+    </view>
+    <view class="tip-text">请选择猪出现的症状，系统将为您分析可能的疾病</view>
+  </view>
+
+  <!-- 症状分类 -->
+  <view class="section-header">
+    <text class="title">选择症状</text>
+    <view class="selected-count" wx:if="{{selectedSymptoms.length > 0}}">
+      已选 {{selectedSymptoms.length}} 项
+    </view>
+  </view>
+
+  <!-- 加载中 -->
+  <view class="loading-state" wx:if="{{loading}}">
+    <view class="loading-spinner"></view>
+    <view class="loading-text">加载中...</view>
+  </view>
+
+  <!-- 症状列表 -->
+  <view class="symptom-categories" wx:else>
+    <view class="category" wx:for="{{symptomCategories}}" wx:key="key">
+      <view class="category-header">
+        <view class="category-icon" style="background-color: {{item.color}};">
+          <text class="category-icon-text">{{item.key === 'temperature' ? '🌡️' : item.key === 'respiratory' ? '💨' : item.key === 'digestive' ? '🍽️' : item.key === 'skin' ? '🩹' : item.key === 'neurological' ? '🧠' : item.key === 'reproductive' ? '👶' : item.key === 'locomotor' ? '🦵' : item.key === 'eye' ? '👁️' : '📋'}}</text>
+        </view>
+        <text class="category-name">{{item.name}}</text>
+      </view>
+      <view class="symptom-grid">
+        <view 
+          wx:for="{{item.symptoms}}" 
+          wx:for-item="symptom"
+          wx:key="id"
+          class="symptom-item {{selectedSymptomIds[symptom.id] ? 'selected' : ''}}" 
+          bindtap="toggleSymptom"
+          data-id="{{symptom.id}}"
+        >
+          {{symptom.name}}
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 底部按钮 -->
+  <view class="bottom-bar" wx:if="{{selectedSymptoms.length > 0}}">
+    <view class="selected-info">
+      <text class="count">{{selectedSymptoms.length}}</text>
+      <text class="label">个症状</text>
+    </view>
+    <view class="btn-diagnose" bindtap="startDiagnosis">
+      开始诊断
+    </view>
+  </view>
+</view>

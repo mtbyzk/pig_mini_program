@@ -1,0 +1,186 @@
+/* pages/diagnosis/diagnosis.wxss */
+
+.container {
+  padding: 24rpx;
+  padding-bottom: 160rpx;
+}
+
+/* 提示卡片 */
+.tip-card {
+  background-color: rgba(255, 36, 66, 0.05);
+  border: 2rpx solid rgba(255, 36, 66, 0.2);
+  border-radius: 16rpx;
+  padding: 20rpx;
+  display: flex;
+  align-items: center;
+  margin-bottom: 24rpx;
+}
+
+.tip-card .tip-icon {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 12rpx;
+}
+
+.tip-card .tip-icon-text {
+  font-size: 32rpx;
+}
+
+.tip-card .tip-text {
+  flex: 1;
+  font-size: 24rpx;
+  color: #FF2442;
+  line-height: 1.5;
+}
+
+/* 区块标题 */
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24rpx;
+}
+
+.section-header .title {
+  font-size: 32rpx;
+  font-weight: 600;
+  color: #1A1A1A;
+}
+
+.section-header .selected-count {
+  font-size: 24rpx;
+  color: #FF2442;
+  background-color: rgba(255, 36, 66, 0.1);
+  padding: 8rpx 16rpx;
+  border-radius: 16rpx;
+}
+
+/* 加载状态 */
+.loading-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80rpx 0;
+}
+
+.loading-spinner {
+  width: 60rpx;
+  height: 60rpx;
+  border: 4rpx solid #EEEEEE;
+  border-top-color: #FF2442;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-text {
+  margin-top: 24rpx;
+  font-size: 28rpx;
+  color: #999999;
+}
+
+/* 症状分类 */
+.symptom-categories {
+  margin-bottom: 24rpx;
+}
+
+.category {
+  background-color: #FFFFFF;
+  border-radius: 20rpx;
+  padding: 24rpx;
+  margin-bottom: 20rpx;
+  box-shadow: 0 4rpx 16rpx rgba(0, 0, 0, 0.05);
+}
+
+.category-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16rpx;
+}
+
+.category-header .category-icon {
+  width: 48rpx;
+  height: 48rpx;
+  border-radius: 12rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12rpx;
+}
+
+.category-header .category-icon-text {
+  font-size: 28rpx;
+}
+
+.category-header .category-name {
+  font-size: 28rpx;
+  font-weight: 600;
+  color: #1A1A1A;
+}
+
+/* 症状网格 */
+.symptom-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16rpx;
+}
+
+.symptom-item {
+  padding: 16rpx 24rpx;
+  background-color: #F5F5F5;
+  border-radius: 16rpx;
+  font-size: 26rpx;
+  color: #666666;
+  border: 2rpx solid transparent;
+}
+
+.symptom-item.selected {
+  background-color: rgba(255, 36, 66, 0.1);
+  color: #FF2442;
+  border-color: #FF2442;
+}
+
+/* 底部按钮 */
+.bottom-bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #FFFFFF;
+  padding: 20rpx 24rpx;
+  padding-bottom: calc(20rpx + env(safe-area-inset-bottom));
+  display: flex;
+  align-items: center;
+  box-shadow: 0 -4rpx 16rpx rgba(0, 0, 0, 0.05);
+}
+
+.bottom-bar .selected-info {
+  flex: 1;
+}
+
+.bottom-bar .selected-info .count {
+  font-size: 40rpx;
+  font-weight: 700;
+  color: #FF2442;
+}
+
+.bottom-bar .selected-info .label {
+  font-size: 24rpx;
+  color: #666666;
+  margin-left: 8rpx;
+}
+
+.bottom-bar .btn-diagnose {
+  background: linear-gradient(135deg, #FF2442, #FF6B81);
+  color: #FFFFFF;
+  padding: 20rpx 48rpx;
+  border-radius: 50rpx;
+  font-size: 28rpx;
+  font-weight: 600;
+}

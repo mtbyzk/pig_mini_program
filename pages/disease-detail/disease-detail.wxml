@@ -1,0 +1,79 @@
+<!-- pages/disease-detail/disease-detail.wxml -->
+<view class="container">
+  <!-- 疾病头部 -->
+  <view class="disease-header">
+    <view class="header-bg">
+      <view class="header-content">
+        <view class="disease-name">{{disease.name}}</view>
+        <view class="disease-alias" wx:if="{{disease.alias}}">别名: {{disease.alias}}</view>
+        <view class="disease-tags">
+          <view class="tag {{disease.severity === 'high' ? 'tag-danger' : disease.severity === 'medium' ? 'tag-warning' : 'tag-success'}}">
+            {{disease.severity === 'high' ? '高危' : disease.severity === 'medium' ? '中危' : '低危'}}
+          </view>
+          <view class="tag tag-primary" wx:if="{{disease.is_contagious}}">传染性</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 疾病描述 -->
+  <view class="section">
+    <view class="section-header">
+      <text class="section-icon">📋</text>
+      <text class="section-title">疾病描述</text>
+    </view>
+    <view class="description-card">
+      <text class="description-text">{{disease.description}}</text>
+    </view>
+  </view>
+
+  <!-- 典型症状 -->
+  <view class="section" wx:if="{{disease.characteristic_symptoms && disease.characteristic_symptoms.length > 0}}">
+    <view class="section-header">
+      <text class="section-icon">🩺</text>
+      <text class="section-title">典型症状</text>
+    </view>
+    <view class="symptoms-card">
+      <view class="symptom-item" wx:for="{{disease.characteristic_symptoms}}" wx:key="*this">
+        <view class="symptom-dot"></view>
+        <text class="symptom-text">{{item}}</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 疾病信息 -->
+  <view class="section">
+    <view class="section-header">
+      <text class="section-icon">📊</text>
+      <text class="section-title">疾病信息</text>
+    </view>
+    <view class="info-card">
+      <view class="info-row">
+        <text class="info-label">潜伏期</text>
+        <text class="info-value">{{disease.incubation_period || '未知'}}</text>
+      </view>
+      <view class="info-row">
+        <text class="info-label">死亡率</text>
+        <text class="info-value">{{disease.mortality_rate || '未知'}}</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 预防措施 -->
+  <view class="section" wx:if="{{disease.prevention}}">
+    <view class="section-header">
+      <text class="section-icon">🛡️</text>
+      <text class="section-title">预防措施</text>
+    </view>
+    <view class="prevention-card">
+      <text class="prevention-text">{{disease.prevention}}</text>
+    </view>
+  </view>
+
+  <!-- 治疗方案按钮 -->
+  <view class="bottom-bar">
+    <view class="btn-treatment" bindtap="goToTreatment">
+      查看治疗方案
+    </view>
+  </view>
+</view>

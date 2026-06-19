@@ -1,0 +1,158 @@
+/* pages/breeding-tips/breeding-tips.wxss */
+
+.container {
+  padding: 24rpx;
+  background-color: #F5F5F5;
+  min-height: 100vh;
+}
+
+/* 提示卡片 */
+.tip-card {
+  background: linear-gradient(135deg, #2ED573, #17C964);
+  border-radius: 24rpx;
+  padding: 24rpx;
+  margin-bottom: 24rpx;
+  display: flex;
+  align-items: center;
+}
+
+.tip-card .tip-icon {
+  width: 48rpx;
+  height: 48rpx;
+  margin-right: 16rpx;
+}
+
+.tip-card .tip-icon-text {
+  font-size: 36rpx;
+}
+
+.tip-card .tip-text {
+  flex: 1;
+  font-size: 24rpx;
+  color: #FFFFFF;
+  line-height: 1.5;
+}
+
+/* 分类选择 */
+.category-scroll {
+  white-space: nowrap;
+  margin-bottom: 24rpx;
+}
+
+.category-selector {
+  display: inline-flex;
+  gap: 12rpx;
+  padding: 4rpx 0;
+}
+
+.category-tag {
+  padding: 12rpx 24rpx;
+  border-radius: 30rpx;
+  font-size: 24rpx;
+  background-color: #FFFFFF;
+  color: #666666;
+  border: 2rpx solid #EEEEEE;
+  white-space: nowrap;
+}
+
+.category-tag.active {
+  background-color: #2ED573;
+  color: #FFFFFF;
+  border-color: #2ED573;
+}
+
+/* 技巧列表 */
+.tips-list {
+  margin-bottom: 24rpx;
+}
+
+.tip-item {
+  background-color: #FFFFFF;
+  border-radius: 20rpx;
+  padding: 24rpx;
+  margin-bottom: 16rpx;
+  box-shadow: 0 4rpx 16rpx rgba(0, 0, 0, 0.05);
+}
+
+.tip-header {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 12rpx;
+}
+
+.tip-icon-wrapper {
+  width: 56rpx;
+  height: 56rpx;
+  background-color: #F5F5F5;
+  border-radius: 12rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 16rpx;
+}
+
+.tip-icon-text {
+  font-size: 32rpx;
+}
+
+.tip-info {
+  flex: 1;
+}
+
+.tip-title {
+  font-size: 28rpx;
+  font-weight: 600;
+  color: #1A1A1A;
+  margin-bottom: 4rpx;
+}
+
+.tip-category {
+  font-size: 22rpx;
+  color: #2ED573;
+  background-color: rgba(46, 213, 115, 0.1);
+  padding: 2rpx 12rpx;
+  border-radius: 8rpx;
+  display: inline-block;
+}
+
+.tip-date {
+  font-size: 22rpx;
+  color: #999999;
+}
+
+.tip-summary {
+  font-size: 24rpx;
+  color: #666666;
+  line-height: 1.6;
+  margin-bottom: 12rpx;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.tip-footer {
+  text-align: right;
+}
+
+.read-more {
+  font-size: 24rpx;
+  color: #2ED573;
+  font-weight: 500;
+}
+
+/* 空状态 */
+.empty-state {
+  text-align: center;
+  padding: 80rpx 0;
+}
+
+.empty-state .empty-icon {
+  font-size: 60rpx;
+  margin-bottom: 16rpx;
+}
+
+.empty-state .text {
+  font-size: 28rpx;
+  color: #999999;
+}

@@ -1,0 +1,109 @@
+<!-- pages/pig-price/pig-price.wxml -->
+<view class="container">
+  <!-- 顶部信息 -->
+  <view class="header-card">
+    <view class="header-info">
+      <view class="header-title">今日猪价</view>
+      <view class="header-date">{{currentDate}}</view>
+      <view class="header-update">数据来源：中国养猪网</view>
+    </view>
+    <view class="header-icon">
+      <text class="icon-text">🐷</text>
+    </view>
+  </view>
+
+  <!-- 品种选择 -->
+  <view class="type-selector">
+    <view 
+      wx:for="{{pigTypes}}" 
+      wx:key="key"
+      class="type-tag {{selectedType === item.key ? 'active' : ''}}" 
+      bindtap="selectType" 
+      data-type="{{item.key}}"
+    >
+      <text class="type-name">{{item.name}}</text>
+      <text class="type-price">{{item.price}}元/斤</text>
+    </view>
+  </view>
+
+  <!-- 价格统计 -->
+  <view class="stats-card">
+    <view class="stat-item">
+      <view class="stat-value avg">{{avgPrice}}</view>
+      <view class="stat-label">全国均价(元/斤)</view>
+    </view>
+    <view class="stat-divider"></view>
+    <view class="stat-item">
+      <view class="stat-value max">{{maxPrice}}</view>
+      <view class="stat-label">最高价(元/斤)</view>
+    </view>
+    <view class="stat-divider"></view>
+    <view class="stat-item">
+      <view class="stat-value min">{{minPrice}}</view>
+      <view class="stat-label">最低价(元/斤)</view>
+    </view>
+  </view>
+
+  <!-- 饲料信息 -->
+  <view class="feed-card">
+    <view class="feed-title">饲料原料价格</view>
+    <view class="feed-items">
+      <view class="feed-item">
+        <text class="feed-name">玉米</text>
+        <text class="feed-price">{{grainData.corn}}元/吨</text>
+        <text class="feed-change {{grainData.cornChange >= 0 ? 'up' : 'down'}}">{{grainData.cornChange}}</text>
+      </view>
+      <view class="feed-item">
+        <text class="feed-name">豆粕</text>
+        <text class="feed-price">{{grainData.soybean}}元/吨</text>
+        <text class="feed-change {{grainData.soybeanChange >= 0 ? 'up' : 'down'}}">{{grainData.soybeanChange}}</text>
+      </view>
+      <view class="feed-item">
+        <text class="feed-name">猪粮比</text>
+        <text class="feed-price ratio">{{grainData.pigGrainRatio}}</text>
+        <text class="feed-change"></text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 排序按钮 -->
+  <view class="sort-bar">
+    <view class="sort-btn {{sortBy === 'price' ? 'active' : ''}}" bindtap="sortByPrice">
+      <text>按价格</text>
+      <text class="sort-icon">{{sortBy === 'price' ? (sortOrder === 'desc' ? '↓' : '↑') : '↕'}}</text>
+    </view>
+    <view class="sort-btn {{sortBy === 'name' ? 'active' : ''}}" bindtap="sortByName">
+      <text>按省份</text>
+      <text class="sort-icon">{{sortBy === 'name' ? (sortOrder === 'asc' ? '↑' : '↓') : '↕'}}</text>
+    </view>
+  </view>
+
+  <!-- 价格列表 -->
+  <view class="price-list">
+    <view class="price-header">
+      <text class="header-province">省份</text>
+      <text class="header-price">元/斤</text>
+      <text class="header-kg">元/公斤</text>
+      <text class="header-trend">涨跌</text>
+    </view>
+    <view class="price-item" wx:for="{{provinces}}" wx:key="name">
+      <view class="province-name">{{item.name}}</view>
+      <view class="price-value">
+        <text class="price-num">{{item.price}}</text>
+      </view>
+      <view class="price-kg">
+        <text class="kg-num">{{item.kgPrice}}</text>
+      </view>
+      <view class="trend {{item.trend}}">
+        <text class="trend-icon">{{item.trend === 'up' ? '↑' : item.trend === 'down' ? '↓' : '→'}}</text>
+        <text class="trend-change">{{item.change}}</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 底部提示 -->
+  <view class="footer-tip">
+    <text>数据来源：中国养猪网 | 更新时间：{{updateTime}}</text>
+    <text>注：1公斤=2斤，价格已换算为每斤价格</text>
+  </view>
+</view>

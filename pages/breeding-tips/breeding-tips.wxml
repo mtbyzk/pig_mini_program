@@ -1,0 +1,49 @@
+<!-- pages/breeding-tips/breeding-tips.wxml -->
+<view class="container">
+  <!-- 顶部提示 -->
+  <view class="tip-card">
+    <view class="tip-icon">
+      <text class="tip-icon-text">📚</text>
+    </view>
+    <view class="tip-text">科学养殖，提高效益。精选实用养殖技巧助您养好猪。</view>
+  </view>
+
+  <!-- 分类选择 -->
+  <scroll-view scroll-x class="category-scroll">
+    <view class="category-selector">
+      <view 
+        wx:for="{{categories}}" 
+        wx:key="key"
+        class="category-tag {{selectedCategory === item.key ? 'active' : ''}}" 
+        bindtap="selectCategory" 
+        data-category="{{item.key}}"
+      >{{item.label}}</view>
+    </view>
+  </scroll-view>
+
+  <!-- 技巧列表 -->
+  <view class="tips-list">
+    <view class="tip-item" wx:for="{{filteredTips}}" wx:key="id" bindtap="viewTipDetail" data-title="{{item.title}}" data-content="{{item.content}}">
+      <view class="tip-header">
+        <view class="tip-icon-wrapper">
+          <text class="tip-icon-text">{{item.icon}}</text>
+        </view>
+        <view class="tip-info">
+          <view class="tip-title">{{item.title}}</view>
+          <view class="tip-category">{{item.categoryName}}</view>
+        </view>
+        <view class="tip-date">{{item.date}}</view>
+      </view>
+      <view class="tip-summary">{{item.summary}}</view>
+      <view class="tip-footer">
+        <text class="read-more">查看详情 ›</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 空状态 -->
+  <view class="empty-state" wx:if="{{filteredTips.length === 0}}">
+    <text class="empty-icon">📚</text>
+    <view class="text">暂无该分类技巧</view>
+  </view>
+</view>

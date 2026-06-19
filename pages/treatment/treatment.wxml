@@ -1,0 +1,162 @@
+<!-- pages/treatment/treatment.wxml -->
+<view class="container">
+  <!-- 疾病头部 -->
+  <view class="disease-header">
+    <view class="header-icon">
+      <text class="header-icon-text">🩺</text>
+    </view>
+    <view class="header-info">
+      <view class="header-name">{{disease.name}}</view>
+      <view class="header-severity">{{disease.severity === 'high' ? '高危' : disease.severity === 'medium' ? '中危' : '低危'}}</view>
+    </view>
+  </view>
+
+  <!-- 典型症状 -->
+  <view class="symptoms-section" wx:if="{{disease.characteristic_symptoms && disease.characteristic_symptoms.length > 0}}">
+    <view class="section-header">
+      <view class="section-icon-wrapper">
+        <text class="section-icon-text">🩺</text>
+      </view>
+      <text class="section-title">典型症状</text>
+    </view>
+    <view class="symptoms-card">
+      <view class="symptom-item" wx:for="{{disease.characteristic_symptoms}}" wx:key="*this">
+        <view class="symptom-dot"></view>
+        <text class="symptom-text">{{item}}</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 方案选择器 -->
+  <view class="plan-selector" wx:if="{{treatment.treatment_plans.length > 1}}">
+    <view class="selector-header">
+      <text class="selector-icon">💊</text>
+      <text class="title">选择治疗方案</text>
+    </view>
+    <scroll-view scroll-x class="plan-scroll">
+      <view class="plan-tabs">
+        <view 
+          class="plan-tab {{selectedPlanIndex === index ? 'active' : ''}}" 
+          wx:for="{{treatment.treatment_plans}}" 
+          wx:key="plan_name"
+          bindtap="selectPlan"
+          data-index="{{index}}"
+        >
+          {{item.plan_name}}
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+
+  <!-- 当前方案 -->
+  <view class="current-plan" wx:if="{{currentPlan}}">
+    <!-- 注射用药方案 -->
+    <view class="section" wx:if="{{currentPlan.medications.length > 0}}">
+      <view class="section-header">
+        <view class="section-icon-wrapper injection">
+          <text class="section-icon-text">💉</text>
+        </view>
+        <text class="section-title">注射用药方案</text>
+      </view>
+      <view class="medication-card" wx:for="{{currentPlan.medications}}" wx:key="medication_name">
+        <view class="medication-name">{{item.medication_name}}</view>
+        <view class="info-row">
+          <text class="label">剂量</text>
+          <text class="value">{{item.dosage_per_kg}}</text>
+        </view>
+        <view class="info-row">
+          <text class="label">频率</text>
+          <text class="value">{{item.frequency}}</text>
+        </view>
+        <view class="info-row">
+          <text class="label">疗程</text>
+          <text class="value">{{item.duration_days}}天</text>
+        </view>
+        <view class="info-row" wx:if="{{item.notes}}">
+          <text class="label">备注</text>
+          <text class="value">{{item.notes}}</text>
+        </view>
+      </view>
+    </view>
+
+    <!-- 口服用药方案 -->
+    <view class="section" wx:if="{{currentPlan.oral_medications.length > 0}}">
+      <view class="section-header">
+        <view class="section-icon-wrapper oral">
+          <text class="section-icon-text">💊</text>
+        </view>
+        <text class="section-title">口服用药方案</text>
+      </view>
+      <view class="medication-card" wx:for="{{currentPlan.oral_medications}}" wx:key="medication_name">
+        <view class="medication-name">{{item.medication_name}}</view>
+        <view class="info-row">
+          <text class="label">用法</text>
+          <text class="value">{{item.dosage}}</text>
+        </view>
+        <view class="info-row">
+          <text class="label">频率</text>
+          <text class="value">{{item.frequency}}</text>
+        </view>
+        <view class="info-row">
+          <text class="label">疗程</text>
+          <text class="value">{{item.duration_days}}天</text>
+        </view>
+        <view class="info-row" wx:if="{{item.notes}}">
+          <text class="label">备注</text>
+          <text class="value">{{item.notes}}</text>
+        </view>
+      </view>
+    </view>
+
+    <!-- 外用药方案 -->
+    <view class="section" wx:if="{{currentPlan.topical_medications.length > 0}}">
+      <view class="section-header">
+        <view class="section-icon-wrapper topical">
+          <text class="section-icon-text">🩹</text>
+        </view>
+        <text class="section-title">外用药方案</text>
+      </view>
+      <view class="medication-card" wx:for="{{currentPlan.topical_medications}}" wx:key="medication_name">
+        <view class="medication-name">{{item.medication_name}}</view>
+        <view class="info-row">
+          <text class="label">用法</text>
+          <text class="value">{{item.usage}}</text>
+        </view>
+        <view class="info-row">
+          <text class="label">频率</text>
+          <text class="value">{{item.frequency}}</text>
+        </view>
+        <view class="info-row">
+          <text class="label">疗程</text>
+          <text class="value">{{item.duration_days}}天</text>
+        </view>
+      </view>
+    </view>
+
+    <!-- 用药注意事项 -->
+    <view class="section" wx:if="{{currentPlan.notes}}">
+      <view class="section-header">
+        <view class="section-icon-wrapper notes">
+          <text class="section-icon-text">⚠️</text>
+        </view>
+        <text class="section-title">用药注意事项</text>
+      </view>
+      <view class="notes-card">
+        <view class="notes-content">{{currentPlan.notes}}</view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 护理建议 -->
+  <view class="section" wx:if="{{treatment.nursing_care}}">
+    <view class="section-header">
+      <view class="section-icon-wrapper nursing">
+        <text class="section-icon-text">❤️</text>
+      </view>
+      <text class="section-title">护理建议</text>
+    </view>
+    <view class="nursing-card">
+      <view class="nursing-content">{{treatment.nursing_care}}</view>
+    </view>
+  </view>
+</view>

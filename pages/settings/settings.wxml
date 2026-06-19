@@ -1,0 +1,188 @@
+<!-- pages/settings/settings.wxml -->
+<view class="container">
+  <!-- 用户卡片 -->
+  <view class="user-card">
+    <view class="avatar">
+      <text class="avatar-icon">👤</text>
+    </view>
+    <view class="info">
+      <view class="name">{{texts.userCard}}</view>
+      <view class="desc">{{texts.proVersion}}</view>
+    </view>
+    <view class="badge">PRO</view>
+  </view>
+
+  <!-- 通用设置 -->
+  <view class="section-header">
+    <text class="title">{{texts.generalSettings}}</text>
+  </view>
+  <view class="settings-group">
+    <view class="settings-item">
+      <view class="icon-wrapper">
+        <text class="item-icon">🌙</text>
+      </view>
+      <view class="content">
+        <view class="name">{{texts.darkMode}}</view>
+      </view>
+      <switch checked="{{isDarkMode}}" bindchange="toggleDarkMode" color="#FF2442" />
+    </view>
+    <view class="settings-item">
+      <view class="icon-wrapper">
+        <text class="item-icon">🌐</text>
+      </view>
+      <view class="content">
+        <view class="name">{{texts.language}}</view>
+        <view class="value">{{language === 'zh' ? '中文' : 'English'}}</view>
+      </view>
+      <switch checked="{{language === 'en'}}" bindchange="toggleLanguage" color="#FF2442" />
+    </view>
+    <view class="settings-item" bindtap="showNotification">
+      <view class="icon-wrapper">
+        <text class="item-icon">🔔</text>
+      </view>
+      <view class="content">
+        <view class="name">{{texts.notification}}</view>
+        <view class="value">{{texts.on}}</view>
+      </view>
+      <text class="arrow">›</text>
+    </view>
+  </view>
+
+  <!-- 数据管理 -->
+  <view class="section-header">
+    <text class="title">{{texts.dataManagement}}</text>
+  </view>
+  <view class="settings-group">
+    <view class="settings-item" bindtap="syncData">
+      <view class="icon-wrapper">
+        <text class="item-icon">🔄</text>
+      </view>
+      <view class="content">
+        <view class="name">{{texts.dataSync}}</view>
+        <view class="value">{{texts.lastSync}}</view>
+      </view>
+      <text class="arrow">›</text>
+    </view>
+    <view class="settings-item" bindtap="showOfflineData">
+      <view class="icon-wrapper">
+        <text class="item-icon">📥</text>
+      </view>
+      <view class="content">
+        <view class="name">{{texts.offlineData}}</view>
+        <view class="value">{{texts.downloaded}}</view>
+      </view>
+      <text class="arrow">›</text>
+    </view>
+    <view class="settings-item" bindtap="clearCache">
+      <view class="icon-wrapper">
+        <text class="item-icon">🧹</text>
+      </view>
+      <view class="content">
+        <view class="name">{{texts.clearCache}}</view>
+        <view class="value">{{texts.currentCache}}</view>
+      </view>
+      <text class="arrow">›</text>
+    </view>
+  </view>
+
+  <!-- 疾病数据 -->
+  <view class="section-header">
+    <text class="title">{{texts.diseaseData}}</text>
+  </view>
+  <view class="settings-group">
+    <view class="settings-item" bindtap="showDiseaseInfo">
+      <view class="icon-wrapper">
+        <text class="item-icon">🦠</text>
+      </view>
+      <view class="content">
+        <view class="name">{{texts.diseaseCount}}</view>
+        <view class="value">{{diseases.length}}{{language === 'en' ? ' types' : '种'}}</view>
+      </view>
+      <text class="arrow">›</text>
+    </view>
+    <view class="settings-item" bindtap="showSymptomInfo">
+      <view class="icon-wrapper">
+        <text class="item-icon">🤒</text>
+      </view>
+      <view class="content">
+        <view class="name">{{texts.symptomCount}}</view>
+        <view class="value">{{symptoms.length}}{{language === 'en' ? ' types' : '种'}}</view>
+      </view>
+      <text class="arrow">›</text>
+    </view>
+    <view class="settings-item" bindtap="showMedicationInfo">
+      <view class="icon-wrapper">
+        <text class="item-icon">💊</text>
+      </view>
+      <view class="content">
+        <view class="name">{{texts.medicationCount}}</view>
+        <view class="value">{{medications.length}}{{language === 'en' ? ' types' : '种'}}</view>
+      </view>
+      <text class="arrow">›</text>
+    </view>
+  </view>
+
+  <!-- 关于 -->
+  <view class="section-header">
+    <text class="title">{{texts.about}}</text>
+  </view>
+  <view class="settings-group">
+    <view class="settings-item" bindtap="showVersion">
+      <view class="icon-wrapper">
+        <text class="item-icon">ℹ️</text>
+      </view>
+      <view class="content">
+        <view class="name">{{texts.version}}</view>
+        <view class="value">v1.0.0</view>
+      </view>
+      <text class="arrow">›</text>
+    </view>
+    <view class="settings-item" bindtap="showAgreement">
+      <view class="icon-wrapper">
+        <text class="item-icon">📄</text>
+      </view>
+      <view class="content">
+        <view class="name">{{texts.agreement}}</view>
+      </view>
+      <text class="arrow">›</text>
+    </view>
+    <view class="settings-item" bindtap="showPrivacy">
+      <view class="icon-wrapper">
+        <text class="item-icon">🔒</text>
+      </view>
+      <view class="content">
+        <view class="name">{{texts.privacyPolicy}}</view>
+      </view>
+      <text class="arrow">›</text>
+    </view>
+    <view class="settings-item" bindtap="showFeedback">
+      <view class="icon-wrapper">
+        <text class="item-icon">💬</text>
+      </view>
+      <view class="content">
+        <view class="name">{{texts.feedback}}</view>
+      </view>
+      <text class="arrow">›</text>
+    </view>
+    <view class="settings-item" bindtap="rateApp">
+      <view class="icon-wrapper">
+        <text class="item-icon">⭐</text>
+      </view>
+      <view class="content">
+        <view class="name">{{texts.rateUs}}</view>
+      </view>
+      <text class="arrow">›</text>
+    </view>
+  </view>
+
+  <!-- 底部信息 -->
+  <view class="footer-info">
+    <view class="logo">
+      <text class="logo-icon">🐷</text>
+    </view>
+    <view class="app-name">{{texts.appName}}</view>
+    <view class="developer">{{texts.developer}}</view>
+    <view class="slogan">{{texts.slogan}}</view>
+    <view class="disclaimer">{{texts.disclaimer}}</view>
+  </view>
+</view>

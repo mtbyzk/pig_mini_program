@@ -1,0 +1,402 @@
+[
+  {
+    "id": "comp01",
+    "drug_a_id": "m01", "drug_a_name": "青霉素钾/钠", "drug_a_route": "注射",
+    "drug_b_id": "m02", "drug_b_name": "链霉素", "drug_b_route": "注射",
+    "compatibility": "compatible",
+    "notes": "经典配伍！同注射器混合，协同杀菌，效果增强4-8倍。",
+    "can_mix_in_syringe": true
+  },
+  {
+    "id": "comp02",
+    "drug_a_id": "m01", "drug_a_name": "青霉素钾/钠", "drug_a_route": "注射",
+    "drug_b_id": "m05", "drug_b_name": "头孢噻呋", "drug_b_route": "注射",
+    "compatibility": "compatible",
+    "notes": "同属β-内酰胺类，可同注射器混合使用。",
+    "can_mix_in_syringe": true
+  },
+  {
+    "id": "comp03",
+    "drug_a_id": "m01", "drug_a_name": "青霉素钾/钠", "drug_a_route": "注射",
+    "drug_b_id": "m04", "drug_b_name": "氟苯尼考", "drug_b_route": "注射",
+    "compatibility": "incompatible",
+    "notes": "禁止同注射器混合！青霉素是杀菌剂，氟苯尼考是抑菌剂，混合后疗效降低50%以上。需分开注射，间隔30分钟。",
+    "can_mix_in_syringe": false
+  },
+  {
+    "id": "comp04",
+    "drug_a_id": "m01", "drug_a_name": "青霉素钾/钠", "drug_a_route": "注射",
+    "drug_b_id": "m33", "drug_b_name": "替米考星", "drug_b_route": "注射",
+    "compatibility": "incompatible",
+    "notes": "禁止同注射器混合！替米考星是抑菌剂，与青霉素有拮抗作用。需分开注射，间隔30分钟。",
+    "can_mix_in_syringe": false
+  },
+  {
+    "id": "comp05",
+    "drug_a_id": "m01", "drug_a_name": "青霉素钾/钠", "drug_a_route": "注射",
+    "drug_b_id": "m16", "drug_b_name": "维生素C", "drug_b_route": "注射",
+    "compatibility": "incompatible",
+    "notes": "禁止同注射器混合！维生素C是还原剂，会使青霉素分解失效，疗效降低70%以上。需分开注射，间隔1小时。",
+    "can_mix_in_syringe": false
+  },
+  {
+    "id": "comp06",
+    "drug_a_id": "m01", "drug_a_name": "青霉素钾/钠", "drug_a_route": "注射",
+    "drug_b_id": "m09", "drug_b_name": "氟尼辛葡甲胺", "drug_b_route": "注射",
+    "compatibility": "compatible",
+    "notes": "可以同注射器混合，退烧药与抗生素联合使用疗效更好。",
+    "can_mix_in_syringe": true
+  },
+  {
+    "id": "comp07",
+    "drug_a_id": "m01", "drug_a_name": "青霉素钾/钠", "drug_a_route": "注射",
+    "drug_b_id": "m55", "drug_b_name": "泰乐菌素", "drug_b_route": "注射",
+    "compatibility": "incompatible",
+    "notes": "禁止同注射器混合！泰乐菌素是抑菌剂，与青霉素有拮抗作用。需分开注射，间隔30分钟。",
+    "can_mix_in_syringe": false
+  },
+  {
+    "id": "comp08",
+    "drug_a_id": "m01", "drug_a_name": "青霉素钾/钠", "drug_a_route": "注射",
+    "drug_b_id": "m39", "drug_b_name": "多西环素", "drug_b_route": "拌料",
+    "compatibility": "incompatible",
+    "notes": "多西环素是抑菌剂，与青霉素有拮抗作用。注射与拌料可同时使用，但不宜同注射器。",
+    "can_mix_in_syringe": false
+  },
+  {
+    "id": "comp09",
+    "drug_a_id": "m05", "drug_a_name": "头孢噻呋", "drug_a_route": "注射",
+    "drug_b_id": "m09", "drug_b_name": "氟尼辛葡甲胺", "drug_b_route": "注射",
+    "compatibility": "compatible",
+    "notes": "可以同注射器混合，退烧药与抗生素联合使用疗效更好。",
+    "can_mix_in_syringe": true
+  },
+  {
+    "id": "comp10",
+    "drug_a_id": "m05", "drug_a_name": "头孢噻呋", "drug_a_route": "注射",
+    "drug_b_id": "m33", "drug_b_name": "替米考星", "drug_b_route": "注射",
+    "compatibility": "incompatible",
+    "notes": "禁止同注射器混合！头孢是杀菌剂，替米考星是抑菌剂，有拮抗作用。需分开注射，间隔30分钟。",
+    "can_mix_in_syringe": false
+  },
+  {
+    "id": "comp11",
+    "drug_a_id": "m05", "drug_a_name": "头孢噻呋", "drug_a_route": "注射",
+    "drug_b_id": "m04", "drug_b_name": "氟苯尼考", "drug_b_route": "注射",
+    "compatibility": "incompatible",
+    "notes": "禁止同注射器混合！头孢是杀菌剂，氟苯尼考是抑菌剂，有拮抗作用。需分开注射，间隔30分钟。",
+    "can_mix_in_syringe": false
+  },
+  {
+    "id": "comp12",
+    "drug_a_id": "m05", "drug_a_name": "头孢噻呋", "drug_a_route": "注射",
+    "drug_b_id": "m39", "drug_b_name": "多西环素", "drug_b_route": "拌料",
+    "compatibility": "incompatible",
+    "notes": "多西环素是抑菌剂，与头孢有拮抗作用。注射与拌料可同时使用，但不宜同注射器。",
+    "can_mix_in_syringe": false
+  },
+  {
+    "id": "comp13",
+    "drug_a_id": "m05", "drug_a_name": "头孢噻呋", "drug_a_route": "注射",
+    "drug_b_id": "m31", "drug_b_name": "黄芪多糖", "drug_b_route": "注射",
+    "compatibility": "incompatible",
+    "notes": "中药注射液与西药分开注射，避免混合。需分开注射，间隔15分钟。",
+    "can_mix_in_syringe": false
+  },
+  {
+    "id": "comp14",
+    "drug_a_id": "m05", "drug_a_name": "头孢噻呋", "drug_a_route": "注射",
+    "drug_b_id": "m11", "drug_b_name": "双黄连注射液", "drug_b_route": "注射",
+    "compatibility": "incompatible",
+    "notes": "中药注射液与西药分开注射，避免混合。需分开注射，间隔15分钟。",
+    "can_mix_in_syringe": false
+  },
+  {
+    "id": "comp15",
+    "drug_a_id": "m33", "drug_a_name": "替米考星", "drug_a_route": "注射",
+    "drug_b_id": "m04", "drug_b_name": "氟苯尼考", "drug_b_route": "注射",
+    "compatibility": "compatible",
+    "notes": "都是抑菌剂，可以联用，但不宜同注射器混合。分开注射效果更好。",
+    "can_mix_in_syringe": false
+  },
+  {
+    "id": "comp16",
+    "drug_a_id": "m33", "drug_a_name": "替米考星", "drug_a_route": "注射",
+    "drug_b_id": "m39", "drug_b_name": "多西环素", "drug_b_route": "拌料",
+    "compatibility": "compatible",
+    "notes": "都是抑菌剂，可以联用。注射+拌料配合使用效果好。",
+    "can_mix_in_syringe": false
+  },
+  {
+    "id": "comp17",
+    "drug_a_id": "m33", "drug_a_name": "替米考星", "drug_a_route": "注射",
+    "drug_b_id": "m09", "drug_b_name": "氟尼辛葡甲胺", "drug_b_route": "注射",
+    "compatibility": "compatible",
+    "notes": "可以分开注射，退烧药与抗生素联合使用疗效更好。",
+    "can_mix_in_syringe": false
+  },
+  {
+    "id": "comp18",
+    "drug_a_id": "m04", "drug_a_name": "氟苯尼考", "drug_a_route": "注射",
+    "drug_b_id": "m39", "drug_b_name": "多西环素", "drug_b_route": "拌料",
+    "compatibility": "compatible",
+    "notes": "都是抑菌剂，可以联用。注射+拌料配合使用效果好。",
+    "can_mix_in_syringe": false
+  },
+  {
+    "id": "comp19",
+    "drug_a_id": "m04", "drug_a_name": "氟苯尼考", "drug_a_route": "注射",
+    "drug_b_id": "m09", "drug_b_name": "氟尼辛葡甲胺", "drug_b_route": "注射",
+    "compatibility": "compatible",
+    "notes": "可以分开注射，退烧药与抗生素联合使用疗效更好。",
+    "can_mix_in_syringe": false
+  },
+  {
+    "id": "comp20",
+    "drug_a_id": "m03", "drug_a_name": "恩诺沙星", "drug_a_route": "注射",
+    "drug_b_id": "m09", "drug_b_name": "氟尼辛葡甲胺", "drug_b_route": "注射",
+    "compatibility": "compatible",
+    "notes": "可以分开注射，退烧药与抗生素联合使用疗效更好。",
+    "can_mix_in_syringe": false
+  },
+  {
+    "id": "comp21",
+    "drug_a_id": "m03", "drug_a_name": "恩诺沙星", "drug_a_route": "注射",
+    "drug_b_id": "m01", "drug_b_name": "青霉素钾/钠", "drug_b_route": "注射",
+    "compatibility": "incompatible",
+    "notes": "喹诺酮类与β-内酰胺类有拮抗作用，需分开注射。",
+    "can_mix_in_syringe": false
+  },
+  {
+    "id": "comp22",
+    "drug_a_id": "m03", "drug_a_name": "恩诺沙星", "drug_a_route": "注射",
+    "drug_b_id": "m05", "drug_b_name": "头孢噻呋", "drug_b_route": "注射",
+    "compatibility": "incompatible",
+    "notes": "喹诺酮类与头孢类有拮抗作用，需分开注射。",
+    "can_mix_in_syringe": false
+  },
+  {
+    "id": "comp23",
+    "drug_a_id": "m01", "drug_a_name": "青霉素钾/钠", "drug_a_route": "注射",
+    "drug_b_id": "m53", "drug_b_name": "氨苄西林", "drug_b_route": "注射",
+    "compatibility": "compatible",
+    "notes": "同属β-内酰胺类，可同注射器混合使用。",
+    "can_mix_in_syringe": true
+  },
+  {
+    "id": "comp24",
+    "drug_a_id": "m05", "drug_a_name": "头孢噻呋", "drug_a_route": "注射",
+    "drug_b_id": "m54", "drug_b_name": "头孢喹肟", "drug_b_route": "注射",
+    "compatibility": "compatible",
+    "notes": "同属头孢菌素类，可同注射器混合使用。",
+    "can_mix_in_syringe": true
+  },
+  {
+    "id": "comp25",
+    "drug_a_id": "m01", "drug_a_name": "青霉素钾/钠", "drug_a_route": "注射",
+    "drug_b_id": "m54", "drug_b_name": "头孢喹肟", "drug_b_route": "注射",
+    "compatibility": "compatible",
+    "notes": "同属β-内酰胺类，可同注射器混合使用。",
+    "can_mix_in_syringe": true
+  },
+  {
+    "id": "comp26",
+    "drug_a_id": "m01", "drug_a_name": "青霉素钾/钠", "drug_a_route": "注射",
+    "drug_b_id": "m61", "drug_b_name": "林可霉素", "drug_b_route": "注射",
+    "compatibility": "incompatible",
+    "notes": "林可霉素是抑菌剂，与青霉素有拮抗作用。需分开注射。",
+    "can_mix_in_syringe": false
+  },
+  {
+    "id": "comp27",
+    "drug_a_id": "m05", "drug_a_name": "头孢噻呋", "drug_a_route": "注射",
+    "drug_b_id": "m61", "drug_b_name": "林可霉素", "drug_b_route": "注射",
+    "compatibility": "incompatible",
+    "notes": "林可霉素是抑菌剂，与头孢有拮抗作用。需分开注射。",
+    "can_mix_in_syringe": false
+  },
+  {
+    "id": "comp28",
+    "drug_a_id": "m01", "drug_a_name": "青霉素钾/钠", "drug_a_route": "注射",
+    "drug_b_id": "m97", "drug_b_name": "磺胺嘧啶钠", "drug_b_route": "注射",
+    "compatibility": "compatible",
+    "notes": "可以分开注射，联合使用扩大抗菌谱。",
+    "can_mix_in_syringe": false
+  },
+  {
+    "id": "comp29",
+    "drug_a_id": "m01", "drug_a_name": "青霉素钾/钠", "drug_a_route": "注射",
+    "drug_b_id": "m42", "drug_b_name": "磺胺间甲氧嘧啶", "drug_b_route": "注射",
+    "compatibility": "compatible",
+    "notes": "可以分开注射，联合使用扩大抗菌谱。",
+    "can_mix_in_syringe": false
+  },
+  {
+    "id": "comp30",
+    "drug_a_id": "m09", "drug_a_name": "氟尼辛葡甲胺", "drug_a_route": "注射",
+    "drug_b_id": "m08", "drug_b_name": "安乃近", "drug_b_route": "注射",
+    "compatibility": "incompatible",
+    "notes": "都是退烧药，不宜同时使用，增加副作用。选择其中一种即可。",
+    "can_mix_in_syringe": false
+  },
+  {
+    "id": "comp31",
+    "drug_a_id": "m09", "drug_a_name": "氟尼辛葡甲胺", "drug_a_route": "注射",
+    "drug_b_id": "m10", "drug_b_name": "地塞米松", "drug_b_route": "注射",
+    "compatibility": "incompatible",
+    "notes": "都是抗炎药，不宜同时使用，增加副作用。退烧用氟尼辛，抗过敏用地塞米松。",
+    "can_mix_in_syringe": false
+  },
+  {
+    "id": "comp32",
+    "drug_a_id": "m07", "drug_a_name": "硫酸庆大霉素", "drug_a_route": "注射",
+    "drug_b_id": "m58", "drug_b_name": "卡那霉素", "drug_b_route": "注射",
+    "compatibility": "incompatible",
+    "notes": "都是氨基糖苷类，不宜同时使用，增加肾毒性。选择其中一种即可。",
+    "can_mix_in_syringe": false
+  },
+  {
+    "id": "comp33",
+    "drug_a_id": "m07", "drug_a_name": "硫酸庆大霉素", "drug_a_route": "注射",
+    "drug_b_id": "m59", "drug_b_name": "大观霉素", "drug_b_route": "注射",
+    "compatibility": "incompatible",
+    "notes": "都是氨基糖苷类，不宜同时使用，增加肾毒性。选择其中一种即可。",
+    "can_mix_in_syringe": false
+  },
+  {
+    "id": "comp34",
+    "drug_a_id": "m55", "drug_a_name": "泰乐菌素", "drug_a_route": "注射",
+    "drug_b_id": "m33", "drug_b_name": "替米考星", "drug_b_route": "注射",
+    "compatibility": "compatible",
+    "notes": "都是大环内酯类，可以联用，但不宜同注射器混合。",
+    "can_mix_in_syringe": false
+  },
+  {
+    "id": "comp35",
+    "drug_a_id": "m55", "drug_a_name": "泰乐菌素", "drug_a_route": "注射",
+    "drug_b_id": "m56", "drug_b_name": "泰万菌素", "drug_b_route": "拌料",
+    "compatibility": "compatible",
+    "notes": "都是大环内酯类，可以联用。注射+拌料配合使用。",
+    "can_mix_in_syringe": false
+  },
+  {
+    "id": "comp36",
+    "drug_a_id": "m33", "drug_a_name": "替米考星", "drug_a_route": "注射",
+    "drug_b_id": "m56", "drug_b_name": "泰万菌素", "drug_b_route": "拌料",
+    "compatibility": "compatible",
+    "notes": "都是大环内酯类，可以联用。注射+拌料配合使用。",
+    "can_mix_in_syringe": false
+  },
+  {
+    "id": "comp37",
+    "drug_a_id": "m38", "drug_a_name": "泰妙菌素", "drug_a_route": "拌料",
+    "drug_b_id": "m33", "drug_b_name": "替米考星", "drug_b_route": "拌料",
+    "compatibility": "incompatible",
+    "notes": "泰妙菌素与聚醚类抗生素（莫能菌素等）有配伍禁忌，与替米考星可联用。",
+    "can_mix_in_syringe": false
+  },
+  {
+    "id": "comp38",
+    "drug_a_id": "m42", "drug_a_name": "磺胺间甲氧嘧啶", "drug_a_route": "注射",
+    "drug_b_id": "m97", "drug_b_name": "磺胺嘧啶钠", "drug_b_route": "注射",
+    "compatibility": "compatible",
+    "notes": "都是磺胺类，可以联用，但不宜同注射器混合。",
+    "can_mix_in_syringe": false
+  },
+  {
+    "id": "comp39",
+    "drug_a_id": "m42", "drug_a_name": "磺胺间甲氧嘧啶", "drug_a_route": "注射",
+    "drug_b_id": "m98", "drug_b_name": "复方磺胺间甲氧嘧啶钠", "drug_b_route": "注射",
+    "compatibility": "compatible",
+    "notes": "都是磺胺类，可以联用，但不宜同注射器混合。",
+    "can_mix_in_syringe": false
+  },
+  {
+    "id": "comp40",
+    "drug_a_id": "m19", "drug_a_name": "阿维菌素", "drug_a_route": "注射",
+    "drug_b_id": "m20", "drug_b_name": "伊维菌素", "drug_b_route": "注射",
+    "compatibility": "compatible",
+    "notes": "都是大环内酯类驱虫药，可以联用，但选择其中一种即可。",
+    "can_mix_in_syringe": false
+  },
+  {
+    "id": "comp41",
+    "drug_a_id": "m19", "drug_a_name": "阿维菌素", "drug_a_route": "注射",
+    "drug_b_id": "m64", "drug_b_name": "多拉菌素", "drug_b_route": "注射",
+    "compatibility": "compatible",
+    "notes": "都是大环内酯类驱虫药，可以联用，但选择其中一种即可。",
+    "can_mix_in_syringe": false
+  },
+  {
+    "id": "comp42",
+    "drug_a_id": "m20", "drug_a_name": "伊维菌素", "drug_a_route": "注射",
+    "drug_b_id": "m64", "drug_b_name": "多拉菌素", "drug_b_route": "注射",
+    "compatibility": "compatible",
+    "notes": "都是大环内酯类驱虫药，可以联用，但选择其中一种即可。",
+    "can_mix_in_syringe": false
+  },
+  {
+    "id": "comp43",
+    "drug_a_id": "m63", "drug_a_name": "阿苯达唑", "drug_a_route": "口服",
+    "drug_b_id": "m43", "drug_b_name": "芬苯达唑", "drug_b_route": "口服",
+    "compatibility": "compatible",
+    "notes": "都是苯并咪唑类驱虫药，可以联用，但选择其中一种即可。",
+    "can_mix_in_syringe": false
+  },
+  {
+    "id": "comp44",
+    "drug_a_id": "m65", "drug_a_name": "地克珠利", "drug_a_route": "拌料",
+    "drug_b_id": "m66", "drug_b_name": "妥曲珠利", "drug_b_route": "口服",
+    "compatibility": "compatible",
+    "notes": "都是抗球虫药，可以联用，但选择其中一种即可。",
+    "can_mix_in_syringe": false
+  },
+  {
+    "id": "comp45",
+    "drug_a_id": "m68", "drug_a_name": "乳酶生", "drug_a_route": "口服",
+    "drug_b_id": "m36", "drug_b_name": "硫酸粘杆菌素", "drug_b_route": "口服",
+    "compatibility": "incompatible",
+    "notes": "抗生素会杀死益生菌，降低疗效。需间隔2小时以上使用。",
+    "can_mix_in_syringe": false
+  },
+  {
+    "id": "comp46",
+    "drug_a_id": "m68", "drug_a_name": "乳酶生", "drug_a_route": "口服",
+    "drug_b_id": "m07", "drug_b_name": "硫酸庆大霉素", "drug_b_route": "口服",
+    "compatibility": "incompatible",
+    "notes": "抗生素会杀死益生菌，降低疗效。需间隔2小时以上使用。",
+    "can_mix_in_syringe": false
+  },
+  {
+    "id": "comp47",
+    "drug_a_id": "m69", "drug_a_name": "枯草芽孢杆菌", "drug_a_route": "拌料",
+    "drug_b_id": "m36", "drug_b_name": "硫酸粘杆菌素", "drug_b_route": "拌料",
+    "compatibility": "incompatible",
+    "notes": "抗生素会杀死益生菌，降低疗效。需间隔使用。",
+    "can_mix_in_syringe": false
+  },
+  {
+    "id": "comp48",
+    "drug_a_id": "m83", "drug_a_name": "缩宫素", "drug_a_route": "注射",
+    "drug_b_id": "m84", "drug_b_name": "氯前列烯醇", "drug_b_route": "注射",
+    "compatibility": "compatible",
+    "notes": "可以联用，缩宫素促进子宫收缩，氯前列烯醇溶解黄体。先后使用效果更好。",
+    "can_mix_in_syringe": false
+  },
+  {
+    "id": "comp49",
+    "drug_a_id": "m83", "drug_a_name": "缩宫素", "drug_a_route": "注射",
+    "drug_b_id": "m85", "drug_b_name": "苯甲酸雌二醇", "drug_b_route": "注射",
+    "compatibility": "compatible",
+    "notes": "可以联用，雌激素促进子宫收缩，缩宫素加强效果。",
+    "can_mix_in_syringe": false
+  },
+  {
+    "id": "comp50",
+    "drug_a_id": "m83", "drug_a_name": "缩宫素", "drug_a_route": "注射",
+    "drug_b_id": "m86", "drug_b_name": "黄体酮", "drug_b_route": "注射",
+    "compatibility": "incompatible",
+    "notes": "缩宫素促进子宫收缩，黄体酮保胎安胎，作用相反。保胎用黄体酮，催产用缩宫素。",
+    "can_mix_in_syringe": false
+  }
+]

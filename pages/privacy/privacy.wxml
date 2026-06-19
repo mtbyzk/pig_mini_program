@@ -1,0 +1,84 @@
+<!-- pages/privacy/privacy.wxml -->
+<view class="container">
+  <view class="header">
+    <view class="title">隐私政策</view>
+    <view class="update-time">更新时间：{{updateTime}}</view>
+  </view>
+
+  <view class="content">
+    <view class="section">
+      <view class="section-title">一、引言</view>
+      <view class="section-content">
+        欢迎使用"猪病诊断助手"（以下简称"本应用"）。我们非常重视您的隐私保护。本隐私政策旨在向您说明我们如何收集、使用、存储和保护您的个人信息。请在使用本应用前仔细阅读本隐私政策。
+      </view>
+    </view>
+
+    <view class="section">
+      <view class="section-title">二、信息收集</view>
+      <view class="section-content">
+        <view class="item">1. 本应用不收集任何个人身份信息，包括但不限于姓名、电话号码、电子邮件地址等。</view>
+        <view class="item">2. 本应用不收集设备信息，包括但不限于设备型号、操作系统版本、唯一设备标识符等。</view>
+        <view class="item">3. 本应用不收集位置信息。</view>
+        <view class="item">4. 本应用不使用Cookies或类似技术来追踪用户。</view>
+      </view>
+    </view>
+
+    <view class="section">
+      <view class="section-title">三、信息使用</view>
+      <view class="section-content">
+        <view class="item">1. 本应用的所有数据均存储在您的本地设备上，不会上传到任何服务器。</view>
+        <view class="item">2. 您在使用本应用时输入的症状信息仅用于本地诊断分析，不会被记录或传输。</view>
+        <view class="item">3. 本应用不进行任何形式的数据分析或用户行为追踪。</view>
+      </view>
+    </view>
+
+    <view class="section">
+      <view class="section-title">四、信息存储</view>
+      <view class="section-content">
+        <view class="item">1. 本应用的所有数据均存储在您的设备本地存储空间中。</view>
+        <view class="item">2. 您可以随时通过应用内的"清除缓存"功能删除所有本地数据。</view>
+        <view class="item">3. 卸载本应用将自动删除所有本地数据。</view>
+      </view>
+    </view>
+
+    <view class="section">
+      <view class="section-title">五、信息安全</view>
+      <view class="section-content">
+        <view class="item">1. 由于本应用不收集、不传输任何个人信息，因此不存在信息泄露的风险。</view>
+        <view class="item">2. 我们建议您定期更新应用以获取最新的安全补丁。</view>
+      </view>
+    </view>
+
+    <view class="section">
+      <view class="section-title">六、未成年人保护</view>
+      <view class="section-content">
+        <view class="item">1. 本应用不针对18岁以下未成年人提供服务。</view>
+        <view class="item">2. 如果您是未成年人，请在监护人指导下使用本应用。</view>
+      </view>
+    </view>
+
+    <view class="section">
+      <view class="section-title">七、隐私政策更新</view>
+      <view class="section-content">
+        <view class="item">1. 我们可能会不时更新本隐私政策。</view>
+        <view class="item">2. 隐私政策更新后，我们会在应用内发布更新通知。</view>
+        <view class="item">3. 继续使用本应用即表示您同意受更新后的隐私政策约束。</view>
+      </view>
+    </view>
+
+    <view class="section">
+      <view class="section-title">八、联系我们</view>
+      <view class="section-content">
+        <view class="item">如果您对本隐私政策有任何疑问或建议，请通过以下方式联系我们：</view>
+        <view class="item">邮箱：5015684@qq.com</view>
+      </view>
+    </view>
+
+    <view class="section">
+      <view class="section-title">九、适用法律</view>
+      <view class="section-content">
+        <view class="item">本隐私政策的解释、执行及争议解决均适用中华人民共和国法律。</view>
+      </view>
+    </view>
+  </view>
+</view>

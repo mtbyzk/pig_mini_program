@@ -1,0 +1,89 @@
+<!-- pages/encyclopedia/encyclopedia.wxml -->
+<view class="container">
+  <!-- 搜索框 -->
+  <view class="search-bar">
+    <text class="search-icon">🔍</text>
+    <input 
+      placeholder="{{texts.searchHint}}" 
+      value="{{searchQuery}}" 
+      bindinput="onSearchInput"
+      confirm-type="search"
+      bindconfirm="onSearch"
+    />
+  </view>
+
+  <!-- 分类标签 -->
+  <scroll-view scroll-x class="tag-scroll">
+    <view class="tag-selector">
+      <view 
+        class="tag {{selectedCategory === 'all' ? 'active' : ''}}" 
+        bindtap="selectCategory" 
+        data-category="all"
+      >{{texts.all}}</view>
+      <view 
+        class="tag {{selectedCategory === 'high' ? 'active' : ''}}" 
+        bindtap="selectCategory" 
+        data-category="high"
+      >{{texts.highRisk}}</view>
+      <view 
+        class="tag {{selectedCategory === 'contagious' ? 'active' : ''}}" 
+        bindtap="selectCategory" 
+        data-category="contagious"
+      >{{texts.contagious}}</view>
+      <view 
+        class="tag {{selectedCategory === 'digestive' ? 'active' : ''}}" 
+        bindtap="selectCategory" 
+        data-category="digestive"
+      >{{texts.digestive}}</view>
+      <view 
+        class="tag {{selectedCategory === 'respiratory' ? 'active' : ''}}" 
+        bindtap="selectCategory" 
+        data-category="respiratory"
+      >{{texts.respiratory}}</view>
+      <view 
+        class="tag {{selectedCategory === 'skin' ? 'active' : ''}}" 
+        bindtap="selectCategory" 
+        data-category="skin"
+      >{{texts.skin}}</view>
+    </view>
+  </scroll-view>
+
+  <!-- 加载中 -->
+  <view class="loading-state" wx:if="{{loading}}">
+    <view class="loading-spinner"></view>
+    <view class="loading-text">...</view>
+  </view>
+
+  <!-- 疾病列表 -->
+  <view class="disease-list" wx:elif="{{filteredDiseases.length > 0}}">
+    <view 
+      class="disease-item" 
+      wx:for="{{filteredDiseases}}" 
+      wx:key="id" 
+      bindtap="goToDiseaseDetail" 
+      data-id="{{item.id}}"
+    >
+      <view class="icon-wrapper" style="background-color: {{item.severity === 'high' ? 'rgba(255, 71, 87, 0.1)' : item.severity === 'medium' ? 'rgba(255, 165, 2, 0.1)' : 'rgba(46, 213, 115, 0.1)'}};">
+        <text class="disease-icon">⚠️</text>
+      </view>
+      <view class="content">
+        <view class="name">{{item.name}}</view>
+        <view class="desc">{{item.description}}</view>
+        <view class="tags">
+          <view class="tag {{item.severity === 'high' ? 'tag-danger' : item.severity === 'medium' ? 'tag-warning' : 'tag-success'}}">
+            {{item.severity === 'high' ? texts.highRisk : item.severity === 'medium' ? (language === 'en' ? 'Medium' : '中危') : (language === 'en' ? 'Low' : '低危')}}
+          </view>
+          <view class="tag tag-primary" wx:if="{{item.is_contagious}}">{{texts.contagious}}</view>
+        </view>
+      </view>
+      <text class="arrow">›</text>
+    </view>
+  </view>
+
+  <!-- 空状态 -->
+  <view class="empty-state" wx:else>
+    <text class="empty-icon">🔍</text>
+    <view class="text">{{texts.noResults}}</view>
+    <view class="sub-text">{{texts.tryOther}}</view>
+  </view>
+</view>
