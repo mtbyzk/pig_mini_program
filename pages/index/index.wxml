@@ -5,7 +5,7 @@
     <text class="developer-text">{{texts.developer}}</text>
   </view>
 
-  <!-- 诊断卡片 -->
+  <!-- AI智能诊断卡片 -->
   <view class="diagnosis-card" bindtap="goToDiagnosis">
     <view class="tag">{{texts.aiDiagnosis}}</view>
     <view class="title">{{texts.startDiagnosis}}</view>
@@ -15,46 +15,47 @@
     </view>
   </view>
 
-  <!-- 功能网格 -->
+  <!-- 快速入口 -->
   <view class="section-header">
     <text class="section-icon">📊</text>
     <text class="title">{{texts.quickEntry}}</text>
   </view>
-  <view class="feature-grid">
-    <view class="feature-item" bindtap="goToDiagnosis">
-      <view class="icon-wrapper" style="background-color: rgba(255, 107, 129, 0.1);">
-        <text class="feature-icon">🔬</text>
+
+  <!-- 功能卡片 -->
+  <view class="feature-cards">
+    <!-- 疫苗接种流程 -->
+    <view class="feature-card blue" bindtap="goToVaccination">
+      <view class="feature-content">
+        <view class="feature-tag">{{language === 'en' ? 'Schedule' : '流程'}}</view>
+        <view class="feature-title">{{language === 'en' ? 'Vaccination' : '疫苗接种流程'}}</view>
+        <view class="feature-desc">{{language === 'en' ? 'Immunization by stage' : '各阶段免疫程序'}}</view>
       </view>
-      <view class="info">
-        <view class="name">{{texts.diseaseDiagnosis}}</view>
-        <view class="desc">{{texts.symptomDiagnosis}}</view>
-      </view>
-    </view>
-    <view class="feature-item" bindtap="goToVaccination">
-      <view class="icon-wrapper" style="background-color: rgba(90, 200, 250, 0.1);">
-        <text class="feature-icon">💉</text>
-      </view>
-      <view class="info">
-        <view class="name">{{language === 'en' ? 'Vaccination' : '疫苗接种流程'}}</view>
-        <view class="desc">{{language === 'en' ? 'Immunization schedule' : '各阶段免疫程序'}}</view>
+      <view class="feature-icon-circle">
+        <text class="feature-icon-text">💉</text>
       </view>
     </view>
-    <view class="feature-item" bindtap="goToPigPrice">
-      <view class="icon-wrapper" style="background-color: rgba(46, 213, 115, 0.1);">
-        <text class="feature-icon">💰</text>
+
+    <!-- 今日猪价 -->
+    <view class="feature-card green" bindtap="goToPigPrice">
+      <view class="feature-content">
+        <view class="feature-tag">{{language === 'en' ? 'Real-time' : '实时'}}</view>
+        <view class="feature-title">{{language === 'en' ? 'Pig Price' : '今日猪价'}}</view>
+        <view class="feature-desc">{{language === 'en' ? 'Provincial prices' : '各省份今日猪价'}}</view>
       </view>
-      <view class="info">
-        <view class="name">{{language === 'en' ? 'Pig Price' : '今日猪价'}}</view>
-        <view class="desc">{{language === 'en' ? 'Provincial prices' : '各省份今日猪价'}}</view>
+      <view class="feature-icon-circle">
+        <text class="feature-icon-text">💰</text>
       </view>
     </view>
-    <view class="feature-item" bindtap="goToBreedingTips">
-      <view class="icon-wrapper" style="background-color: rgba(46, 213, 115, 0.1);">
-        <text class="feature-icon">📚</text>
+
+    <!-- 养殖技巧 -->
+    <view class="feature-card orange" bindtap="goToBreedingTips">
+      <view class="feature-content">
+        <view class="feature-tag">{{language === 'en' ? 'Tips' : '技巧'}}</view>
+        <view class="feature-title">{{language === 'en' ? 'Breeding Tips' : '养殖技巧'}}</view>
+        <view class="feature-desc">{{language === 'en' ? 'Practical guides' : '实用养殖技巧'}}</view>
       </view>
-      <view class="info">
-        <view class="name">{{language === 'en' ? 'Breeding Tips' : '养殖技巧'}}</view>
-        <view class="desc">{{language === 'en' ? 'Practical tips' : '实用养殖技巧'}}</view>
+      <view class="feature-icon-circle">
+        <text class="feature-icon-text">📚</text>
       </view>
     </view>
   </view>

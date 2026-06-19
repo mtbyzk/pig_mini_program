@@ -2,6 +2,18 @@
 App({
   onLaunch() {
     console.log('=== App Launch ===')
+    
+    // 初始化云开发
+    if (!wx.cloud) {
+      console.error('请使用 2.2.3 或以上的基础库以使用云能力')
+    } else {
+      wx.cloud.init({
+        env: 'your-env-id', // 替换为你的云开发环境ID
+        traceUser: true,
+      })
+      console.log('云开发初始化成功')
+    }
+    
     this.initData()
     this.loadThemeMode()
   },
@@ -85,11 +97,11 @@ App({
         home: '首页',
         encyclopedia: '疾病百科',
         settings: '设置',
-        diagnosis: '疾病诊断',
+        diagnosis: '疾病分析',
         medication: '用药方案',
         compatibility: '药物配伍',
-        record: '诊断记录',
-        startDiagnosis: '开始诊断',
+        record: '分析记录',
+        startDiagnosis: '开始分析',
         selectSymptoms: '选择症状，快速判断疾病',
         quickEntry: '快速入口',
         commonDiseases: '常见高危疾病',
@@ -118,12 +130,12 @@ App({
         home: 'Home',
         encyclopedia: 'Encyclopedia',
         settings: 'Settings',
-        diagnosis: 'Diagnosis',
+        diagnosis: 'Disease Analysis',
         medication: 'Medication',
         compatibility: 'Compatibility',
-        record: 'Record',
-        startDiagnosis: 'Start Diagnosis',
-        selectSymptoms: 'Select symptoms to diagnose disease',
+        record: 'Analysis Record',
+        startDiagnosis: 'Start Analysis',
+        selectSymptoms: 'Select symptoms to analyze disease',
         quickEntry: 'Quick Entry',
         commonDiseases: 'Common High-risk Diseases',
         viewAll: 'View All',

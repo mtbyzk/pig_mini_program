@@ -6,7 +6,7 @@
       <text class="summary-icon-text">📊</text>
     </view>
     <view class="summary-info">
-      <view class="summary-title">诊断完成</view>
+      <view class="summary-title">分析完成</view>
       <view class="summary-desc">已选择 {{symptomCount}} 个症状，匹配到 {{results.length}} 种可能疾病</view>
     </view>
   </view>
@@ -54,7 +54,7 @@
   <view class="empty-state" wx:else>
     <text class="empty-icon">🔍</text>
     <view class="text">未找到匹配的疾病</view>
-    <view class="sub-text">请尝试选择更多症状或重新诊断</view>
-    <view class="btn-retry" bindtap="retryDiagnosis">重新诊断</view>
+    <view class="sub-text">请尝试选择更多症状或重新分析</view>
+    <view class="btn-retry" bindtap="retryDiagnosis">重新分析</view>
   </view>
 </view>

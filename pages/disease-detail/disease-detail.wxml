@@ -41,6 +41,45 @@
     </view>
   </view>
 
+  <!-- 疾病分型 -->
+  <view class="section" wx:if="{{disease.disease_types && disease.disease_types.length > 0}}">
+    <view class="section-header">
+      <text class="section-icon">📊</text>
+      <text class="section-title">疾病分型</text>
+    </view>
+    <view class="types-card">
+      <view class="type-item" wx:for="{{disease.disease_types}}" wx:key="name">
+        <view class="type-header">
+          <text class="type-name">{{item.name}}</text>
+        </view>
+        <view class="type-symptoms">
+          <view class="type-symptom" wx:for="{{item.symptoms}}" wx:for-item="symptom" wx:key="*this">
+            <view class="type-dot"></view>
+            <text class="type-text">{{symptom}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 鉴别要点 -->
+  <view class="section" wx:if="{{disease.differential_diagnosis && disease.differential_diagnosis.length > 0}}">
+    <view class="section-header">
+      <text class="section-icon">🔍</text>
+      <text class="section-title">鉴别要点</text>
+    </view>
+    <view class="differential-card">
+      <view class="differential-item" wx:for="{{disease.differential_diagnosis}}" wx:key="disease">
+        <view class="differential-header">
+          <text class="differential-name">与{{item.disease}}鉴别</text>
+        </view>
+        <view class="differential-content">
+          <text class="differential-text">{{item.points}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
   <!-- 疾病信息 -->
   <view class="section">
     <view class="section-header">

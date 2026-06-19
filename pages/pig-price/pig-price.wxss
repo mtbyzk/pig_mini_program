@@ -349,3 +349,34 @@
   color: #999999;
   margin-bottom: 4rpx;
 }
+
+/* 城市猪价查询按钮 */
+.city-price-btn {
+  background-color: #FFFFFF;
+  border-radius: 16rpx;
+  padding: 20rpx 24rpx;
+  margin-bottom: 24rpx;
+  box-shadow: 0 4rpx 16rpx rgba(0, 0, 0, 0.05);
+}
+
+.btn-content {
+  display: flex;
+  align-items: center;
+}
+
+.btn-icon {
+  font-size: 32rpx;
+  margin-right: 12rpx;
+}
+
+.btn-text {
+  flex: 1;
+  font-size: 28rpx;
+  font-weight: 600;
+  color: #1A1A1A;
+}
+
+.btn-arrow {
+  font-size: 32rpx;
+  color: #FF2442;
+}

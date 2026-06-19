@@ -106,10 +106,30 @@ Page({
 
     if (searchQuery) {
       const query = searchQuery.toLowerCase()
+      
+      // 获取疾病症状关联数据
+      const diseaseSymptoms = app.globalData.diseaseSymptoms || []
+      const symptoms = app.globalData.symptoms || []
+      
+      // 找到匹配的症状ID
+      const matchedSymptomIds = symptoms
+        .filter(s => s.name.toLowerCase().includes(query))
+        .map(s => s.id)
+      
+      // 找到包含这些症状的疾病ID
+      const matchedDiseaseIds = new Set()
+      diseaseSymptoms.forEach(ds => {
+        if (matchedSymptomIds.includes(ds.symptom_id)) {
+          matchedDiseaseIds.add(ds.disease_id)
+        }
+      })
+      
       filtered = filtered.filter(d =>
         d.name.toLowerCase().includes(query) ||
         d.alias.toLowerCase().includes(query) ||
-        d.description.toLowerCase().includes(query)
+        d.description.toLowerCase().includes(query) ||
+        (d.characteristic_symptoms && d.characteristic_symptoms.some(s => s.toLowerCase().includes(query))) ||
+        matchedDiseaseIds.has(d.id)
       )
     }
 

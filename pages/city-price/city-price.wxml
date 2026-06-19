@@ -1,0 +1,85 @@
+<!-- pages/city-price/city-price.wxml -->
+<view class="container">
+  <!-- 顶部信息 -->
+  <view class="header-card">
+    <view class="header-info">
+      <view class="header-title">城市猪价查询</view>
+      <view class="header-date">{{selectedProvinceName}}</view>
+    </view>
+    <view class="header-icon">
+      <text class="icon-text">🏙️</text>
+    </view>
+  </view>
+
+  <!-- 省份选择器 -->
+  <view class="province-selector" bindtap="showProvincePicker">
+    <view class="selector-content">
+      <text class="selector-icon">📍</text>
+      <text class="selector-text">{{selectedProvinceName}}</text>
+      <text class="selector-arrow">▼</text>
+    </view>
+  </view>
+
+  <!-- 省份选择弹窗 -->
+  <view class="province-picker" wx:if="{{showProvincePicker}}">
+    <view class="picker-mask" bindtap="hideProvincePicker"></view>
+    <view class="picker-content">
+      <view class="picker-header">
+        <text class="picker-title">选择省份</text>
+        <text class="picker-close" bindtap="hideProvincePicker">✕</text>
+      </view>
+      <scroll-view scroll-y class="picker-list">
+        <view 
+          wx:for="{{provinces}}" 
+          wx:key="code"
+          class="picker-item {{selectedProvince === item.code ? 'active' : ''}}"
+          bindtap="selectProvince"
+          data-code="{{item.code}}"
+          data-name="{{item.name}}"
+        >
+          <text>{{item.name}}</text>
+          <text class="check" wx:if="{{selectedProvince === item.code}}">✓</text>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+
+  <!-- 加载中 -->
+  <view class="loading-state" wx:if="{{loading}}">
+    <view class="loading-spinner"></view>
+    <view class="loading-text">加载中...</view>
+  </view>
+
+  <!-- 城市列表 -->
+  <view class="city-list" wx:elif="{{cities.length > 0}}">
+    <view class="list-header">
+      <text class="header-city">城市</text>
+      <text class="header-price">元/斤</text>
+      <text class="header-kg">元/公斤</text>
+      <text class="header-trend">涨跌</text>
+    </view>
+    <view class="city-item" wx:for="{{cities}}" wx:key="name">
+      <view class="city-name">{{item.name}}</view>
+      <view class="city-price">
+        <text class="price-value">{{item.price}}</text>
+      </view>
+      <view class="city-kg">
+        <text class="kg-value">{{item.kgPrice}}</text>
+      </view>
+      <view class="trend {{item.trend}}">
+        <text class="trend-icon">{{item.trend === 'up' ? '↑' : item.trend === 'down' ? '↓' : '→'}}</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 空状态 -->
+  <view class="empty-state" wx:else>
+    <text class="empty-icon">🏙️</text>
+    <view class="text">请选择省份查看城市猪价</view>
+  </view>
+
+  <!-- 底部提示 -->
+  <view class="footer-tip">
+    <text>数据来源：中国养猪网 | 更新时间：2026-06-19</text>
+  </view>
+</view>

@@ -5,11 +5,29 @@
     <view class="header-info">
       <view class="header-title">今日猪价</view>
       <view class="header-date">{{currentDate}}</view>
-      <view class="header-update">数据来源：中国养猪网</view>
+      <view class="header-update" wx:if="{{updateTime}}">更新时间：{{updateTime}}</view>
+      <view class="header-update" wx:else>数据加载中...</view>
     </view>
-    <view class="header-icon">
-      <text class="icon-text">🐷</text>
+    <view class="header-actions">
+      <view class="refresh-btn" bindtap="refreshData">
+        <text class="refresh-icon">🔄</text>
+      </view>
+      <view class="header-icon">
+        <text class="icon-text">🐷</text>
+      </view>
     </view>
+  </view>
+
+  <!-- 加载状态 -->
+  <view class="loading-card" wx:if="{{loading}}">
+    <view class="loading-spinner"></view>
+    <view class="loading-text">正在获取最新猪价数据...</view>
+  </view>
+
+  <!-- 错误提示 -->
+  <view class="error-card" wx:if="{{error}}">
+    <text class="error-icon">⚠️</text>
+    <text class="error-text">{{error}}</text>
   </view>
 
   <!-- 品种选择 -->
@@ -66,6 +84,15 @@
     </view>
   </view>
 
+  <!-- 城市猪价查询 -->
+  <view class="city-price-btn" bindtap="goToCityPrice">
+    <view class="btn-content">
+      <text class="btn-icon">🏙️</text>
+      <text class="btn-text">查询城市猪价</text>
+      <text class="btn-arrow">›</text>
+    </view>
+  </view>
+
   <!-- 排序按钮 -->
   <view class="sort-bar">
     <view class="sort-btn {{sortBy === 'price' ? 'active' : ''}}" bindtap="sortByPrice">
@@ -79,7 +106,7 @@
   </view>
 
   <!-- 价格列表 -->
-  <view class="price-list">
+  <view class="price-list" wx:if="{{provinces.length > 0}}">
     <view class="price-header">
       <text class="header-province">省份</text>
       <text class="header-price">元/斤</text>
@@ -89,7 +116,7 @@
     <view class="price-item" wx:for="{{provinces}}" wx:key="name">
       <view class="province-name">{{item.name}}</view>
       <view class="price-value">
-        <text class="price-num">{{item.price}}</text>
+        <text class="price-num">{{item.jinPrice}}</text>
       </view>
       <view class="price-kg">
         <text class="kg-num">{{item.kgPrice}}</text>
@@ -101,9 +128,17 @@
     </view>
   </view>
 
+  <!-- 空状态 -->
+  <view class="empty-state" wx:elif="{{!loading}}">
+    <text class="empty-icon">📊</text>
+    <view class="text">暂无猪价数据</view>
+    <view class="sub-text">请点击刷新按钮获取最新数据</view>
+    <view class="btn-refresh" bindtap="refreshData">刷新数据</view>
+  </view>
+
   <!-- 底部提示 -->
   <view class="footer-tip">
-    <text>数据来源：中国养猪网 | 更新时间：{{updateTime}}</text>
+    <text>数据来源：中国养猪网 | 实时更新</text>
     <text>注：1公斤=2斤，价格已换算为每斤价格</text>
   </view>
 </view>

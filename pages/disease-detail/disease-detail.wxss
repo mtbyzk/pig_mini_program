@@ -132,6 +132,102 @@
   line-height: 1.5;
 }
 
+/* 疾病分型 */
+.types-card {
+  background-color: #FFFFFF;
+  border-radius: 16rpx;
+  padding: 20rpx;
+  box-shadow: 0 4rpx 16rpx rgba(0, 0, 0, 0.05);
+}
+
+.types-card .type-item {
+  margin-bottom: 20rpx;
+  padding-bottom: 20rpx;
+  border-bottom: 1rpx solid #F5F5F5;
+}
+
+.types-card .type-item:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.types-card .type-header {
+  margin-bottom: 12rpx;
+}
+
+.types-card .type-name {
+  font-size: 26rpx;
+  font-weight: 600;
+  color: #FF2442;
+}
+
+.types-card .type-symptoms {
+  padding-left: 16rpx;
+}
+
+.types-card .type-symptom {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 8rpx;
+}
+
+.types-card .type-dot {
+  width: 8rpx;
+  height: 8rpx;
+  border-radius: 50%;
+  background-color: #999999;
+  margin-top: 10rpx;
+  margin-right: 12rpx;
+  flex-shrink: 0;
+}
+
+.types-card .type-text {
+  font-size: 24rpx;
+  color: #666666;
+  line-height: 1.4;
+}
+
+/* 鉴别要点 */
+.differential-card {
+  background-color: #FFFFFF;
+  border-radius: 16rpx;
+  padding: 20rpx;
+  box-shadow: 0 4rpx 16rpx rgba(0, 0, 0, 0.05);
+}
+
+.differential-card .differential-item {
+  margin-bottom: 16rpx;
+  padding-bottom: 16rpx;
+  border-bottom: 1rpx solid #F5F5F5;
+}
+
+.differential-card .differential-item:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.differential-card .differential-header {
+  margin-bottom: 8rpx;
+}
+
+.differential-card .differential-name {
+  font-size: 26rpx;
+  font-weight: 600;
+  color: #1A1A1A;
+}
+
+.differential-card .differential-content {
+  padding-left: 16rpx;
+}
+
+.differential-card .differential-text {
+  font-size: 24rpx;
+  color: #666666;
+  line-height: 1.5;
+}
+
 /* 信息卡片 */
 .info-card {
   background-color: #FFFFFF;

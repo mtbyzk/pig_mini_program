@@ -11,12 +11,13 @@
     "pages/agreement/agreement",
     "pages/vaccination/vaccination",
     "pages/pig-price/pig-price",
+    "pages/city-price/city-price",
     "pages/breeding-tips/breeding-tips"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#FF2442",
-    "navigationBarTitleText": "猪病诊断助手",
+    "navigationBarTitleText": "猪病分析助手",
     "navigationBarTextStyle": "white",
     "backgroundColor": "#F5F5F5"
   },
@@ -46,6 +47,8 @@
       }
     ]
   },
+  "cloud": true,
+  "cloudfunctionRoot": "cloudfunctions/",
   "sitemapLocation": "sitemap.json",
   "style": "v2"
 }

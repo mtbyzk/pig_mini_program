@@ -5,21 +5,22 @@
     <view class="tip-icon">
       <text class="tip-icon-text">💉</text>
     </view>
-    <view class="tip-text">科学免疫，预防为主。以下为各阶段猪只推荐免疫程序。</view>
+    <view class="tip-text">科学免疫，预防为主。以下为各类型猪只推荐免疫程序。</view>
   </view>
 
-  <!-- 阶段选择 -->
-  <scroll-view scroll-x class="stage-scroll">
-    <view class="stage-selector">
-      <view 
-        wx:for="{{stages}}" 
-        wx:key="key"
-        class="stage-tag {{selectedStage === item.key ? 'active' : ''}}" 
-        bindtap="selectStage" 
-        data-stage="{{item.key}}"
-      >{{item.label}}</view>
+  <!-- 猪只类型选择 -->
+  <view class="type-selector">
+    <view 
+      wx:for="{{pigTypes}}" 
+      wx:key="key"
+      class="type-tag {{selectedType === item.key ? 'active' : ''}}" 
+      bindtap="selectType" 
+      data-type="{{item.key}}"
+    >
+      <text class="type-icon">{{item.key === 'all' ? '📋' : item.key === 'fattening' ? '🐷' : item.key === 'sow' ? '🐷' : '🐗'}}</text>
+      <text class="type-label">{{item.label}}</text>
     </view>
-  </scroll-view>
+  </view>
 
   <!-- 疫苗列表 -->
   <view class="vaccine-list">
@@ -31,7 +32,7 @@
             {{item.importance === 'high' ? '必做' : '推荐'}}
           </view>
         </view>
-        <view class="stage-badge">{{item.stageName}}</view>
+        <view class="type-badge">{{item.typeName}}</view>
       </view>
       
       <view class="vaccine-info">
@@ -52,12 +53,25 @@
           <text class="info-value notes">{{item.notes}}</text>
         </view>
       </view>
+
+      <!-- 特殊注意事项 -->
+      <view class="special-notes" wx:if="{{item.special_notes && item.special_notes.length > 0}}">
+        <view class="notes-header">
+          <text class="notes-icon">⚠️</text>
+          <text class="notes-title">特殊注意事项</text>
+        </view>
+        <view class="notes-content">
+          <view class="note-item" wx:for="{{item.special_notes}}" wx:for-item="note" wx:key="*this">
+            <text class="note-text {{note === '' ? 'empty' : ''}}">{{note || ' '}}</text>
+          </view>
+        </view>
+      </view>
     </view>
   </view>
 
   <!-- 空状态 -->
   <view class="empty-state" wx:if="{{filteredVaccines.length === 0}}">
     <text class="empty-icon">💉</text>
-    <view class="text">暂无该阶段疫苗信息</view>
+    <view class="text">暂无该类型疫苗信息</view>
   </view>
 </view>
