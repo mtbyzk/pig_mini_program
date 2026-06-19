@@ -1,0 +1,188 @@
+<!-- pages/settings/settings.wxml -->
+<view class="container">
+  <!-- 用户卡片 -->
+  <view class="user-card">
+    <view class="avatar">
+      <image class="icon" src="/images/person.png" mode="aspectFit"></image>
+    </view>
+    <view class="info">
+      <view class="name">兽医用户</view>
+      <view class="desc">专业版 · 无限制使用</view>
+    </view>
+    <view class="badge">PRO</view>
+  </view>
+
+  <!-- 通用设置 -->
+  <view class="section-header">
+    <text class="title">通用设置</text>
+  </view>
+  <view class="settings-group">
+    <view class="settings-item">
+      <view class="icon-wrapper">
+        <image class="icon" src="/images/dark-mode.png" mode="aspectFit"></image>
+      </view>
+      <view class="content">
+        <view class="name">深色模式</view>
+      </view>
+      <switch checked="{{isDarkMode}}" bindchange="toggleDarkMode" color="#FF2442" />
+    </view>
+    <view class="settings-item">
+      <view class="icon-wrapper">
+        <image class="icon" src="/images/language.png" mode="aspectFit"></image>
+      </view>
+      <view class="content">
+        <view class="name">语言</view>
+        <view class="value">{{language === 'zh' ? '中文' : 'English'}}</view>
+      </view>
+      <switch checked="{{language === 'en'}}" bindchange="toggleLanguage" color="#FF2442" />
+    </view>
+    <view class="settings-item" bindtap="showNotification">
+      <view class="icon-wrapper">
+        <image class="icon" src="/images/notification.png" mode="aspectFit"></image>
+      </view>
+      <view class="content">
+        <view class="name">通知提醒</view>
+        <view class="value">开启</view>
+      </view>
+      <image class="arrow" src="/images/arrow-right.png" mode="aspectFit"></image>
+    </view>
+  </view>
+
+  <!-- 数据管理 -->
+  <view class="section-header">
+    <text class="title">数据管理</text>
+  </view>
+  <view class="settings-group">
+    <view class="settings-item" bindtap="syncData">
+      <view class="icon-wrapper">
+        <image class="icon" src="/images/sync.png" mode="aspectFit"></image>
+      </view>
+      <view class="content">
+        <view class="name">数据同步</view>
+        <view class="value">上次同步: 今天</view>
+      </view>
+      <image class="arrow" src="/images/arrow-right.png" mode="aspectFit"></image>
+    </view>
+    <view class="settings-item" bindtap="showOfflineData">
+      <view class="icon-wrapper">
+        <image class="icon" src="/images/download.png" mode="aspectFit"></image>
+      </view>
+      <view class="content">
+        <view class="name">离线数据</view>
+        <view class="value">已下载</view>
+      </view>
+      <image class="arrow" src="/images/arrow-right.png" mode="aspectFit"></image>
+    </view>
+    <view class="settings-item" bindtap="clearCache">
+      <view class="icon-wrapper">
+        <image class="icon" src="/images/clean.png" mode="aspectFit"></image>
+      </view>
+      <view class="content">
+        <view class="name">清除缓存</view>
+        <view class="value">当前缓存: {{cacheSize}}</view>
+      </view>
+      <image class="arrow" src="/images/arrow-right.png" mode="aspectFit"></image>
+    </view>
+  </view>
+
+  <!-- 疾病数据 -->
+  <view class="section-header">
+    <text class="title">疾病数据</text>
+  </view>
+  <view class="settings-group">
+    <view class="settings-item" bindtap="showDiseaseInfo">
+      <view class="icon-wrapper">
+        <image class="icon" src="/images/coronavirus.png" mode="aspectFit"></image>
+      </view>
+      <view class="content">
+        <view class="name">疾病数量</view>
+        <view class="value">{{diseases.length}}种</view>
+      </view>
+      <image class="arrow" src="/images/arrow-right.png" mode="aspectFit"></image>
+    </view>
+    <view class="settings-item" bindtap="showSymptomInfo">
+      <view class="icon-wrapper">
+        <image class="icon" src="/images/sick.png" mode="aspectFit"></image>
+      </view>
+      <view class="content">
+        <view class="name">症状数量</view>
+        <view class="value">{{symptoms.length}}种</view>
+      </view>
+      <image class="arrow" src="/images/arrow-right.png" mode="aspectFit"></image>
+    </view>
+    <view class="settings-item" bindtap="showMedicationInfo">
+      <view class="icon-wrapper">
+        <image class="icon" src="/images/medication.png" mode="aspectFit"></image>
+      </view>
+      <view class="content">
+        <view class="name">药品数量</view>
+        <view class="value">{{medications.length}}种</view>
+      </view>
+      <image class="arrow" src="/images/arrow-right.png" mode="aspectFit"></image>
+    </view>
+  </view>
+
+  <!-- 关于 -->
+  <view class="section-header">
+    <text class="title">关于</text>
+  </view>
+  <view class="settings-group">
+    <view class="settings-item" bindtap="showVersion">
+      <view class="icon-wrapper">
+        <image class="icon" src="/images/info.png" mode="aspectFit"></image>
+      </view>
+      <view class="content">
+        <view class="name">版本</view>
+        <view class="value">v1.0.0</view>
+      </view>
+      <image class="arrow" src="/images/arrow-right.png" mode="aspectFit"></image>
+    </view>
+    <view class="settings-item" bindtap="showAgreement">
+      <view class="icon-wrapper">
+        <image class="icon" src="/images/agreement.png" mode="aspectFit"></image>
+      </view>
+      <view class="content">
+        <view class="name">使用协议</view>
+      </view>
+      <image class="arrow" src="/images/arrow-right.png" mode="aspectFit"></image>
+    </view>
+    <view class="settings-item" bindtap="showPrivacy">
+      <view class="icon-wrapper">
+        <image class="icon" src="/images/privacy.png" mode="aspectFit"></image>
+      </view>
+      <view class="content">
+        <view class="name">隐私政策</view>
+      </view>
+      <image class="arrow" src="/images/arrow-right.png" mode="aspectFit"></image>
+    </view>
+    <view class="settings-item" bindtap="showFeedback">
+      <view class="icon-wrapper">
+        <image class="icon" src="/images/feedback.png" mode="aspectFit"></image>
+      </view>
+      <view class="content">
+        <view class="name">意见反馈</view>
+      </view>
+      <image class="arrow" src="/images/arrow-right.png" mode="aspectFit"></image>
+    </view>
+    <view class="settings-item" bindtap="rateApp">
+      <view class="icon-wrapper">
+        <image class="icon" src="/images/star.png" mode="aspectFit"></image>
+      </view>
+      <view class="content">
+        <view class="name">给我们评分</view>
+      </view>
+      <image class="arrow" src="/images/arrow-right.png" mode="aspectFit"></image>
+    </view>
+  </view>
+
+  <!-- 底部信息 -->
+  <view class="footer-info">
+    <view class="logo">
+      <image class="icon" src="/images/pets.png" mode="aspectFit"></image>
+    </view>
+    <view class="app-name">猪病诊断助手</view>
+    <view class="developer">开发者：WangXin</view>
+    <view class="slogan">专业 · 快速 · 准确</view>
+    <view class="disclaimer">数据仅供参考，具体用药请咨询兽医</view>
+  </view>
+</view>
