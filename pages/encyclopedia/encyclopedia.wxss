@@ -1,0 +1,172 @@
+/* pages/encyclopedia/encyclopedia.wxss */
+
+.container {
+  padding: 24rpx;
+  padding-bottom: 120rpx;
+}
+
+/* 搜索框 */
+.search-bar {
+  background-color: #FFFFFF;
+  border-radius: 50rpx;
+  padding: 16rpx 24rpx;
+  display: flex;
+  align-items: center;
+  margin-bottom: 24rpx;
+  box-shadow: 0 4rpx 16rpx rgba(0, 0, 0, 0.05);
+}
+
+.search-bar .icon {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 16rpx;
+}
+
+.search-bar input {
+  flex: 1;
+  font-size: 28rpx;
+  color: #1A1A1A;
+}
+
+.search-bar input::placeholder {
+  color: #999999;
+}
+
+/* 标签选择器 */
+.tag-scroll {
+  white-space: nowrap;
+  margin-bottom: 24rpx;
+}
+
+.tag-selector {
+  display: inline-flex;
+  gap: 16rpx;
+  padding: 8rpx 0;
+}
+
+.tag-selector .tag {
+  padding: 12rpx 24rpx;
+  border-radius: 30rpx;
+  font-size: 24rpx;
+  background-color: #FFFFFF;
+  color: #666666;
+  border: 2rpx solid #EEEEEE;
+  white-space: nowrap;
+}
+
+.tag-selector .tag.active {
+  background-color: rgba(255, 36, 66, 0.1);
+  color: #FF2442;
+  border-color: #FF2442;
+}
+
+/* 疾病列表 */
+.disease-list {
+  margin-bottom: 24rpx;
+}
+
+.disease-item {
+  background-color: #FFFFFF;
+  border-radius: 20rpx;
+  padding: 24rpx;
+  margin-bottom: 20rpx;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4rpx 16rpx rgba(0, 0, 0, 0.05);
+}
+
+.disease-item .icon-wrapper {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 16rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20rpx;
+  flex-shrink: 0;
+}
+
+.disease-item .icon-wrapper .icon {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.disease-item .content {
+  flex: 1;
+  min-width: 0;
+}
+
+.disease-item .content .name {
+  font-size: 30rpx;
+  font-weight: 600;
+  color: #1A1A1A;
+}
+
+.disease-item .content .desc {
+  font-size: 24rpx;
+  color: #666666;
+  margin-top: 8rpx;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.disease-item .content .tags {
+  display: flex;
+  gap: 12rpx;
+  margin-top: 12rpx;
+}
+
+.disease-item .arrow {
+  width: 32rpx;
+  height: 32rpx;
+  margin-left: 16rpx;
+  flex-shrink: 0;
+}
+
+.tag {
+  display: inline-block;
+  padding: 8rpx 16rpx;
+  border-radius: 16rpx;
+  font-size: 22rpx;
+  font-weight: 500;
+}
+
+.tag-primary {
+  background-color: rgba(255, 36, 66, 0.1);
+  color: #FF2442;
+}
+
+.tag-success {
+  background-color: rgba(46, 213, 115, 0.1);
+  color: #2ED573;
+}
+
+.tag-warning {
+  background-color: rgba(255, 165, 2, 0.1);
+  color: #FFA502;
+}
+
+.tag-danger {
+  background-color: rgba(255, 71, 87, 0.1);
+  color: #FF4757;
+}
+
+/* 空状态 */
+.empty-state {
+  text-align: center;
+  padding: 80rpx 0;
+}
+
+.empty-state .icon {
+  width: 120rpx;
+  height: 120rpx;
+  margin: 0 auto 24rpx;
+  opacity: 0.3;
+}
+
+.empty-state .text {
+  font-size: 28rpx;
+  color: #999999;
+}
